@@ -239,5 +239,52 @@
         "dinner": "minestrone"
       }
     ]
+  },
+  {
+    "id": "express",
+    "name": "Express ≤ 20 min",
+    "theme": "Tout est prêt en moins de 20 minutes",
+    "defaultConstraints": [
+      "sans-lactose"
+    ],
+    "seasons": [],
+    "cover": "https://source.unsplash.com/featured/600x400/?quick,dinner",
+    "days": [
+      {
+        "day": "Lundi",
+        "lunch": "tartine-avocat-oeuf",
+        "dinner": "pates-ail-pignons"
+      },
+      {
+        "day": "Mardi",
+        "lunch": "wrap-thon",
+        "dinner": "wok-poulet-legumes"
+      },
+      {
+        "day": "Mercredi",
+        "lunch": "salade-thon-ble",
+        "dinner": "tortilla-espagnole"
+      },
+      {
+        "day": "Jeudi",
+        "lunch": "salade-pois-chiches",
+        "dinner": "nouilles-citron-anchois"
+      },
+      {
+        "day": "Vendredi",
+        "lunch": "wrap-thon",
+        "dinner": "poelee-oeufs-epinards"
+      },
+      {
+        "day": "Samedi",
+        "lunch": "pizza-fine",
+        "dinner": "wok-poulet-legumes"
+      },
+      {
+        "day": "Dimanche",
+        "lunch": "salade-nicoise",
+        "dinner": "pates-ail-pignons"
+      }
+    ]
   }
 ]

@@ -4173,5 +4173,521 @@
       "Préparer la semoule selon paquet (gonfler dans eau bouillante, défaire à la fourchette).",
       "Servir semoule avec légumes et bouillon."
     ]
+  },
+  {
+    "id": "pates-ail-pignons",
+    "title": "Pâtes ail, pignons, persil",
+    "slot": "dinner",
+    "timeMin": 12,
+    "description": "Pâtes minutes à l'ail confit, pignons grillés et chapelure dorée.",
+    "tags": [
+      "italien",
+      "vegetarien",
+      "rapide",
+      "une-poele"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 400,
+        "unit": "g",
+        "name": "spaghetti",
+        "category": "pains-pates",
+        "scalable": true
+      },
+      {
+        "qty": 4,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 60,
+        "unit": "g",
+        "name": "pignons de pin",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "persil",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "piment en flocons",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Cuire les pâtes 9 min en eau bouillante salée.",
+      "Dorer les pignons 2 min à sec dans une poêle.",
+      "Ajouter huile, ail émincé, piment. Chauffer 2 min sans brûler.",
+      "Égoutter les pâtes en gardant 1 louche d'eau.",
+      "Mélanger pâtes, huile aillée, eau de cuisson, persil. Servir."
+    ]
+  },
+  {
+    "id": "poelee-oeufs-epinards",
+    "title": "Poêlée d'épinards et œufs",
+    "slot": "dinner",
+    "timeMin": 10,
+    "description": "Épinards sautés à l'ail, œufs cassés dessus et cuits 4 min.",
+    "tags": [
+      "vegetarien",
+      "rapide",
+      "une-poele"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 500,
+        "unit": "g",
+        "name": "pousses d'épinards",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 4,
+        "unit": "oeuf",
+        "name": "œufs",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "noix de muscade",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Faire revenir ail émincé dans huile 1 min.",
+      "Ajouter épinards, sauter 3 min jusqu'à ce qu'ils tombent.",
+      "Saler, ajouter muscade. Faire 4 puits dans les épinards.",
+      "Casser un œuf dans chaque puits. Couvrir, cuire 4 min.",
+      "Servir avec pain grillé."
+    ]
+  },
+  {
+    "id": "tartine-avocat-oeuf",
+    "title": "Tartine avocat-œuf poché",
+    "slot": "lunch",
+    "timeMin": 8,
+    "description": "Tartine de pain complet, avocat écrasé citronné et œuf poché coulant.",
+    "tags": [
+      "vegetarien",
+      "rapide"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 4,
+        "unit": "tranche",
+        "name": "pain complet",
+        "category": "pains-pates",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "avocats mûrs",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 4,
+        "unit": "oeuf",
+        "name": "œufs",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "citron",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "piment en flocons",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Porter une casserole d'eau à frémissement avec 1 cs de vinaigre.",
+      "Pocher les œufs 3 min en tourbillon. Égoutter.",
+      "Écraser avocats avec jus de citron, sel.",
+      "Toaster le pain. Tartiner d'avocat.",
+      "Poser un œuf dessus, parsemer de piment."
+    ]
+  },
+  {
+    "id": "salade-thon-ble",
+    "title": "Salade de blé au thon et maïs",
+    "slot": "lunch",
+    "timeMin": 10,
+    "description": "Salade fraîche de blé précuit, thon, maïs et tomates avec vinaigrette.",
+    "tags": [
+      "rapide",
+      "poisson"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 400,
+        "unit": "g",
+        "name": "blé précuit",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "boite",
+        "name": "thon naturel",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "maïs doux",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": null,
+        "name": "tomates",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "concombre",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "vinaigre balsamique",
+        "category": "epicerie",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Rincer le blé précuit à l'eau froide. Égoutter.",
+      "Couper tomates et concombre en dés.",
+      "Mélanger blé, thon émietté, maïs, légumes.",
+      "Préparer la vinaigrette: huile, vinaigre, sel.",
+      "Arroser, mélanger, servir."
+    ]
+  },
+  {
+    "id": "wok-poulet-legumes",
+    "title": "Wok poulet brocoli au sésame",
+    "slot": "dinner",
+    "timeMin": 15,
+    "description": "Wok rapide poulet, brocoli et poivron à la sauce soja-sésame.",
+    "tags": [
+      "asiatique",
+      "viande",
+      "rapide",
+      "une-poele"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 500,
+        "unit": "g",
+        "name": "filets de poulet",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "brocoli",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "poivron rouge",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 4,
+        "unit": "cs",
+        "name": "sauce soja",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "huile de sésame",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "graines de sésame",
+        "category": "epicerie",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cm",
+        "name": "gingembre frais",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Détailler poulet en lanières, brocoli en fleurettes, poivron en lamelles.",
+      "Faire sauter le poulet 5 min dans huile chaude. Réserver.",
+      "Sauter brocoli et poivron 5 min avec gingembre râpé.",
+      "Remettre le poulet, ajouter sauce soja et huile de sésame. Sauter 2 min.",
+      "Parsemer de graines de sésame, servir avec riz."
+    ]
+  },
+  {
+    "id": "tortilla-espagnole",
+    "title": "Tortilla espagnole pommes de terre-oignons",
+    "slot": "dinner",
+    "timeMin": 20,
+    "description": "L'omelette épaisse espagnole, pommes de terre fondantes et oignons confits.",
+    "tags": [
+      "espagnol",
+      "vegetarien",
+      "rapide"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 600,
+        "unit": "g",
+        "name": "pommes de terre",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "oignons",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 8,
+        "unit": "oeuf",
+        "name": "œufs",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Peler et trancher finement pommes de terre et oignons.",
+      "Faire confire dans 6 cs d'huile à feu doux 12 min en remuant.",
+      "Égoutter, mélanger aux œufs battus salés. Laisser reposer 2 min.",
+      "Remettre dans la poêle, cuire 4 min couvert.",
+      "Retourner avec une assiette, cuire 3 min de l'autre côté."
+    ]
+  },
+  {
+    "id": "nouilles-citron-anchois",
+    "title": "Nouilles citron, anchois et chapelure",
+    "slot": "dinner",
+    "timeMin": 12,
+    "description": "Linguine umami aux anchois, citron, ail et chapelure dorée.",
+    "tags": [
+      "italien",
+      "poisson",
+      "rapide",
+      "une-poele"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 400,
+        "unit": "g",
+        "name": "linguine",
+        "category": "pains-pates",
+        "scalable": true
+      },
+      {
+        "qty": 60,
+        "unit": "g",
+        "name": "filets d'anchois à l'huile",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "citron",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 60,
+        "unit": "g",
+        "name": "chapelure",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "persil",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "piment en flocons",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Cuire les linguine 9 min en eau bouillante salée.",
+      "Pendant ce temps, dorer la chapelure dans 2 cs d'huile 3 min. Réserver.",
+      "Faire fondre anchois et ail dans 3 cs d'huile 2 min.",
+      "Égoutter pâtes, mélanger avec anchois, zeste et jus de citron, piment.",
+      "Garnir de chapelure et persil. Servir aussitôt."
+    ]
   }
 ]
