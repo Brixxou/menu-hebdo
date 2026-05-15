@@ -435,3 +435,5 @@ body {
 }
 .item-name { flex: 1; }
 .item-qty { color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 14px; }
+.course-cat.dragging { opacity: 0.5; }
+.cat-move { background: none; border: none; padding: 2px 4px; color: var(--text-muted); cursor: pointer; font-size: 11px; }

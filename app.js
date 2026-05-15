@@ -147,7 +147,29 @@ function rerender() {
       rerender();
     },
     onShare: () => console.log('TODO: share'),
-    onShoppingMode: () => console.log('TODO: shopping mode')
+    onShoppingMode: () => console.log('TODO: shopping mode'),
+    onReorderAisles: (movedCat, targetCat) => {
+      state.mutate(d => {
+        const order = d.preferences.aisleOrder.slice();
+        const fromIdx = order.indexOf(movedCat);
+        const toIdx = order.indexOf(targetCat);
+        order.splice(fromIdx, 1);
+        order.splice(toIdx, 0, movedCat);
+        d.preferences.aisleOrder = order;
+      });
+      rerender();
+    },
+    onMoveAisle: (cat, dir) => {
+      state.mutate(d => {
+        const order = d.preferences.aisleOrder.slice();
+        const i = order.indexOf(cat);
+        const j = i + dir;
+        if (j < 0 || j >= order.length) return;
+        [order[i], order[j]] = [order[j], order[i]];
+        d.preferences.aisleOrder = order;
+      });
+      rerender();
+    }
   };
   renderSemaine(document.getElementById('view-semaine'), { state: s, data: _dataCache, callbacks });
   renderCourses(document.getElementById('view-courses'), { state: s, data: _dataCache, callbacks });

@@ -31,6 +31,33 @@ export function renderCourses(container, { state, data, callbacks }) {
   for (const cat of list) {
     container.appendChild(renderCategory(cat, state, callbacks));
   }
+
+  // Drag & drop des rayons (desktop) + fallback ▲▼ (mobile)
+  let draggedCategory = null;
+  container.querySelectorAll('.course-cat').forEach(section => {
+    const head = section.querySelector('.cat-head');
+    head.addEventListener('dragstart', e => {
+      draggedCategory = section.dataset.category;
+      e.dataTransfer.effectAllowed = 'move';
+      section.classList.add('dragging');
+    });
+    head.addEventListener('dragend', () => {
+      section.classList.remove('dragging');
+      draggedCategory = null;
+    });
+    section.addEventListener('dragover', e => { e.preventDefault(); });
+    section.addEventListener('drop', e => {
+      e.preventDefault();
+      if (!draggedCategory || draggedCategory === section.dataset.category) return;
+      callbacks.onReorderAisles(draggedCategory, section.dataset.category);
+    });
+    head.querySelectorAll('.cat-move').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        callbacks.onMoveAisle(section.dataset.category, parseInt(btn.dataset.dir, 10));
+      });
+    });
+  });
 }
 
 function renderCategory(cat, state, callbacks) {
@@ -40,6 +67,8 @@ function renderCategory(cat, state, callbacks) {
   section.innerHTML = `
     <header class="cat-head" draggable="true">
       <span class="cat-drag">⋮⋮</span>
+      <button class="cat-move" data-dir="-1" aria-label="Monter">▲</button>
+      <button class="cat-move" data-dir="+1" aria-label="Descendre">▼</button>
       <h3>${labelForCategory(cat.category)}</h3>
     </header>
     <ul class="cat-list">
