@@ -34,6 +34,7 @@ function renderWeek(state, data, callbacks) {
   header.innerHTML = `
     <div class="semaine-title">
       <h2>${escapeHtml(menuName)}</h2>
+      <button class="btn-link" id="btn-history">Historique</button>
       <button class="btn-link" id="btn-restart">Nouvelle semaine</button>
     </div>
     <div class="people-slider">
@@ -42,6 +43,7 @@ function renderWeek(state, data, callbacks) {
     </div>
   `;
   header.querySelector('#btn-restart').addEventListener('click', callbacks.onStartWeek);
+  header.querySelector('#btn-history').addEventListener('click', () => callbacks.onOpenHistory());
   header.querySelector('#people-input').addEventListener('input', e => {
     const v = Math.max(1, Math.min(12, parseInt(e.target.value, 10) || 1));
     callbacks.onChangePeople(v);

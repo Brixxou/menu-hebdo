@@ -10,6 +10,7 @@ import { renderRecettes } from './js/views/recettes.js';
 import { enterShoppingMode, exitShoppingMode } from './js/ui/shopping-mode.js';
 import { shareShoppingList } from './js/ui/share.js';
 import { buildShoppingList } from './js/shopping.js';
+import { openHistory } from './js/views/history.js';
 
 const state = createState();
 
@@ -139,6 +140,24 @@ function rerender() {
             state.archiveAndStart(draft);
             rerender();
           }
+        }
+      });
+    },
+    onOpenHistory: () => {
+      const s = state.load();
+      openHistory({
+        history: s.history,
+        data: _dataCache,
+        onRestart: (idx) => {
+          const week = JSON.parse(JSON.stringify(s.history[idx]));
+          week.startedAt = new Date().toISOString().slice(0, 10);
+          // reset cooked + checked for the restored week
+          week.days.forEach(d => {
+            if (d.lunch) d.lunch.cooked = false;
+            if (d.dinner) d.dinner.cooked = false;
+          });
+          state.archiveAndStart(week);
+          rerender();
         }
       });
     },

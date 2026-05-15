@@ -572,3 +572,8 @@ body.shopping-mode .shopping-exit {
   cursor: pointer;
 }
 .timer-row button:hover { background: rgba(255, 255, 255, 0.25); }
+
+.history-list { list-style: none; }
+.history-list li { padding: 12px 0; border-bottom: 1px solid var(--separator); cursor: pointer; }
+.hist-date { color: var(--text-muted); font-size: 13px; }
+.hist-menu { font-size: 16px; }
