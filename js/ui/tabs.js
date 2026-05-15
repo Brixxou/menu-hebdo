@@ -11,6 +11,9 @@ export function initTabs() {
 
 export function switchTab(name) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.target === name));
-  document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.dataset.tab === name));
-  window.scrollTo({ top: 0 });
+  document.querySelectorAll('.view').forEach(v => {
+    const active = v.dataset.tab === name;
+    v.classList.toggle('active', active);
+    if (active) v.scrollTop = 0;
+  });
 }
