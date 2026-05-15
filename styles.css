@@ -105,3 +105,84 @@ body {
   margin-top: 16px;
 }
 .btn-primary:active { opacity: 0.8; }
+
+.semaine-header {
+  margin-bottom: 16px;
+}
+.semaine-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.semaine-title h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+.people-slider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+.people-slider input {
+  width: 60px;
+  padding: 6px 10px;
+  border: 1px solid var(--separator);
+  border-radius: 8px;
+  font: inherit;
+  text-align: center;
+}
+.day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.day-card {
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  box-shadow: var(--shadow-card);
+}
+.day-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.meal {
+  padding: 8px 0;
+  border-top: 1px solid var(--separator);
+  cursor: pointer;
+}
+.meal:first-of-type { border-top: none; }
+.meal-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+.meal-title {
+  font-size: 16px;
+  margin: 2px 0;
+}
+.meal-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.meal.cooked .meal-title { text-decoration: line-through; opacity: 0.5; }
+.meal-empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+@media (min-width: 768px) {
+  .day-list { display: grid; grid-template-columns: repeat(2, 1fr); }
+}
