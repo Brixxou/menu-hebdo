@@ -12,6 +12,7 @@ export function openWizard({ data, currentDefaults, callbacks }) {
   let step = 1;
   let selectedMenuId = null;
   let hasChoice = false;
+  let peopleGlobal = currentDefaults.peopleGlobal ?? 4;
   let draft = null;     // { startedAt, menuId, days, peopleGlobal, notes }
 
   function render() {
@@ -67,7 +68,15 @@ export function openWizard({ data, currentDefaults, callbacks }) {
     };
     const sortedMenus = [...data.menus].sort((a, b) => seasonOf(a) - seasonOf(b));
     body.innerHTML = `
-      <h2 class="wizard-title">Choisis ton menu</h2>
+      <div class="wizard-people">
+        <span class="wizard-people-label">Pour combien de personnes ?</span>
+        <div class="people-inline">
+          <button class="ppl-btn" data-dir="-1" aria-label="Moins">${icons.minus({ size: 16 })}</button>
+          <span class="ppl-value">${peopleGlobal}</span>
+          <button class="ppl-btn" data-dir="+1" aria-label="Plus">${icons.plus({ size: 16 })}</button>
+        </div>
+      </div>
+      <h2 class="wizard-title">Choisis ton <em class="italic">menu</em></h2>
       <div class="menu-grid">
         ${sortedMenus.map(m => {
           const coverStyle = m.cover ? `style="background-image: url('${m.cover}');"` : '';
@@ -85,6 +94,13 @@ export function openWizard({ data, currentDefaults, callbacks }) {
       </div>
     `;
     populateIcons(body);
+    body.querySelectorAll('.ppl-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const dir = parseInt(btn.dataset.dir, 10);
+        peopleGlobal = Math.max(1, Math.min(12, peopleGlobal + dir));
+        body.querySelector('.ppl-value').textContent = peopleGlobal;
+      });
+    });
     body.querySelectorAll('.menu-card').forEach(card => {
       card.addEventListener('click', () => {
         const id = card.dataset.menu;
@@ -170,7 +186,7 @@ export function openWizard({ data, currentDefaults, callbacks }) {
       draft = {
         startedAt: today,
         menuId: selectedMenuId,
-        peopleGlobal: currentDefaults.peopleGlobal,
+        peopleGlobal: peopleGlobal,
         notes: {},
         days: menu
           ? menu.days.map(d => ({

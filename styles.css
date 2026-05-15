@@ -1002,3 +1002,43 @@ body.shopping-mode .cat-list li.checked .check { background: var(--olive); borde
 /* === Animations === */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+/* === Wizard people stepper (step 1) === */
+.wizard-people {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 100px;
+}
+.wizard-people-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.wizard-people .people-inline {
+  background: var(--bg-warm);
+}
+
+/* === Settings === */
+.settings-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.settings-about {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 8px;
+}

@@ -267,8 +267,16 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btn-settings').addEventListener('click', () => {
     openSettings({
       state: state.load(),
-      onChange: (patch) => {
-        state.mutate(d => { Object.assign(d.preferences, patch); });
+      onResetStock: () => {
+        state.mutate(d => { d.shoppingList.inStock = {}; });
+        rerender();
+      },
+      onResetChecked: () => {
+        state.mutate(d => { d.shoppingList.checked = {}; });
+        rerender();
+      },
+      onClearHistory: () => {
+        state.mutate(d => { d.history = []; });
         rerender();
       }
     });
