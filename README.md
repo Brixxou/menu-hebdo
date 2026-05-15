@@ -2,7 +2,9 @@
 
 Une mini-app PWA pour planifier ses repas de la semaine, swapper ses recettes et générer automatiquement sa liste de courses. Installable sur iPhone, fonctionne hors-ligne.
 
-> **Statut :** 🚧 En développement — design validé, implémentation à venir.
+> **App en ligne :** https://menu-hebdo.netlify.app
+>
+> Sur iPhone : ouvre l'URL dans Safari → Partager → Ajouter à l'écran d'accueil.
 
 ## Idée
 
