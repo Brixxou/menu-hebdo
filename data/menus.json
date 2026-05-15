@@ -144,5 +144,52 @@
         "dinner": "parmentier-canard-patate"
       }
     ]
+  },
+  {
+    "id": "batch-cooking",
+    "name": "Batch cooking dimanche",
+    "theme": "Cuisiner une fois, manger toute la semaine",
+    "defaultConstraints": [
+      "sans-lactose"
+    ],
+    "seasons": [],
+    "cover": "https://source.unsplash.com/featured/600x400/?meal-prep,food",
+    "days": [
+      {
+        "day": "Lundi",
+        "lunch": "salade-quinoa-batch",
+        "dinner": "chili-sin-carne"
+      },
+      {
+        "day": "Mardi",
+        "lunch": "cake-legumes",
+        "dinner": "boulettes-tomate"
+      },
+      {
+        "day": "Mercredi",
+        "lunch": "salade-quinoa-batch",
+        "dinner": "lasagnes-courgettes"
+      },
+      {
+        "day": "Jeudi",
+        "lunch": "cake-legumes",
+        "dinner": "parmentier-patate-douce"
+      },
+      {
+        "day": "Vendredi",
+        "lunch": "wrap-thon",
+        "dinner": "riz-pilaf-poulet"
+      },
+      {
+        "day": "Samedi",
+        "lunch": "pizza-fine",
+        "dinner": "chili-sin-carne"
+      },
+      {
+        "day": "Dimanche",
+        "lunch": "salade-nicoise",
+        "dinner": "lasagnes-courgettes"
+      }
+    ]
   }
 ]

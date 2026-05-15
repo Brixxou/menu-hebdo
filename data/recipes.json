@@ -2854,5 +2854,660 @@
       "Dans un plat, alterner pommes de terre, lardons et oignons, napper de la crème.",
       "Parsemer de chapelure, enfourner 20 min."
     ]
+  },
+  {
+    "id": "chili-sin-carne",
+    "title": "Chili sin carne haricots-lentilles",
+    "slot": "dinner",
+    "timeMin": 35,
+    "description": "Chili végétal réconfortant qui se bonifie en réchauffant. Idéal en batch.",
+    "tags": [
+      "mexicain",
+      "vegetarien",
+      "mijote",
+      "batch"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "haricots rouges",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "lentilles vertes",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "tomates concassées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "oignons",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "poivron rouge",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "cumin moulu",
+        "category": "epices",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "paprika fumé",
+        "category": "epices",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "piment doux",
+        "category": "epices",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Faire revenir oignons, ail, poivron en dés dans huile 5 min.",
+      "Ajouter cumin, paprika, piment, remuer 1 min.",
+      "Verser tomates, lentilles rincées et 500 ml d'eau. Mijoter 25 min.",
+      "Ajouter haricots rouges, mijoter 5 min de plus. Saler.",
+      "Servir avec riz ou tortillas, coriandre fraîche."
+    ]
+  },
+  {
+    "id": "lasagnes-courgettes",
+    "title": "Lasagnes courgettes & béchamel avoine",
+    "slot": "dinner",
+    "timeMin": 60,
+    "description": "Lasagnes végétariennes en couches. Se réchauffent parfaitement.",
+    "tags": [
+      "italien",
+      "vegetarien",
+      "au-four",
+      "batch"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 4,
+        "unit": null,
+        "name": "courgettes",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 250,
+        "unit": "g",
+        "name": "feuilles de lasagne",
+        "category": "pains-pates",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "tomates concassées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 500,
+        "unit": "ml",
+        "name": "lait d'avoine",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 40,
+        "unit": "g",
+        "name": "farine",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "noix de muscade",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 200°C. Trancher les courgettes en lamelles.",
+      "Faire revenir oignon, ail, ajouter tomates et courgettes. Mijoter 10 min.",
+      "Préparer la béchamel: fondre 2 cs huile, farine, lait d'avoine, muscade, sel. Épaissir 5 min.",
+      "Monter en couches: sauce, lasagnes, béchamel. Répéter 3 fois.",
+      "Cuire au four 30 min jusqu'à dorure."
+    ]
+  },
+  {
+    "id": "parmentier-patate-douce",
+    "title": "Parmentier de patate douce & bœuf",
+    "slot": "dinner",
+    "timeMin": 50,
+    "description": "Hachis Parmentier revisité, écrasé de patate douce sucré-épicé.",
+    "tags": [
+      "francais",
+      "viande",
+      "au-four",
+      "batch"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 1,
+        "unit": "kg",
+        "name": "patates douces",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 500,
+        "unit": "g",
+        "name": "bœuf haché",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "thym frais",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 100,
+        "unit": "ml",
+        "name": "lait d'avoine",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Cuire les patates douces pelées 20 min à l'eau bouillante salée.",
+      "Faire revenir oignon, ail, bœuf haché 10 min à la poêle avec thym, sel.",
+      "Écraser les patates douces avec lait d'avoine et huile. Saler.",
+      "Monter dans un plat: viande dessous, purée dessus, lisser.",
+      "Enfourner 20 min à 200°C jusqu'à dorure du dessus."
+    ]
+  },
+  {
+    "id": "boulettes-tomate",
+    "title": "Boulettes de bœuf sauce tomate",
+    "slot": "dinner",
+    "timeMin": 40,
+    "description": "Boulettes maison mijotées dans une sauce tomate aux herbes. Se congèle bien.",
+    "tags": [
+      "italien",
+      "viande",
+      "mijote",
+      "batch"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 500,
+        "unit": "g",
+        "name": "bœuf haché",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "oeuf",
+        "name": "œuf",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 50,
+        "unit": "g",
+        "name": "chapelure",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "boite",
+        "name": "tomates concassées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "persil",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "origan séché",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Mélanger viande, œuf, chapelure, persil haché, sel. Former 20 boulettes.",
+      "Dorer les boulettes 5 min dans huile, réserver.",
+      "Faire revenir oignon, ail, ajouter tomates et origan. Saler.",
+      "Replonger les boulettes dans la sauce, mijoter 25 min à couvert.",
+      "Servir avec pâtes ou polenta."
+    ]
+  },
+  {
+    "id": "riz-pilaf-poulet",
+    "title": "Riz pilaf au poulet et amandes",
+    "slot": "dinner",
+    "timeMin": 35,
+    "description": "Riz basmati parfumé aux oignons fondants, dés de poulet et amandes grillées.",
+    "tags": [
+      "oriental",
+      "viande",
+      "une-poele",
+      "batch"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 300,
+        "unit": "g",
+        "name": "riz basmati",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 500,
+        "unit": "g",
+        "name": "filets de poulet",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "oignons",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 60,
+        "unit": "g",
+        "name": "amandes effilées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "cannelle moulue",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "cumin moulu",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 600,
+        "unit": "ml",
+        "name": "bouillon de volaille",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Faire dorer les amandes à sec 3 min, réserver.",
+      "Faire fondre les oignons émincés 10 min dans huile.",
+      "Ajouter le poulet en dés, dorer 5 min. Saler, ajouter cannelle, cumin.",
+      "Ajouter le riz, remuer 1 min. Verser le bouillon chaud.",
+      "Couvrir, cuire 15 min à feu doux. Garnir d'amandes au service."
+    ]
+  },
+  {
+    "id": "cake-legumes",
+    "title": "Cake salé courgette, tomates séchées, olives",
+    "slot": "both",
+    "timeMin": 50,
+    "description": "Cake salé moelleux parfait pour les lunch boxes de la semaine.",
+    "tags": [
+      "francais",
+      "vegetarien",
+      "au-four",
+      "batch"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "farine",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "oeuf",
+        "name": "œufs",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 100,
+        "unit": "ml",
+        "name": "lait d'avoine",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 80,
+        "unit": "ml",
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "courgette",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 80,
+        "unit": "g",
+        "name": "tomates séchées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 80,
+        "unit": "g",
+        "name": "olives noires dénoyautées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "sachet de levure",
+        "category": "epicerie",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 180°C.",
+      "Râper la courgette, presser pour ôter l'eau. Hacher tomates et olives.",
+      "Battre œufs, lait, huile. Ajouter farine, levure, sel.",
+      "Incorporer courgette, tomates, olives. Verser dans un moule huilé.",
+      "Cuire 40 min jusqu'à ce qu'un couteau ressorte sec."
+    ]
+  },
+  {
+    "id": "salade-quinoa-batch",
+    "title": "Salade quinoa, légumes rôtis et tahini",
+    "slot": "lunch",
+    "timeMin": 35,
+    "description": "Salade de quinoa et légumes rôtis qui se garde 4 jours. Idéale en batch lunch.",
+    "tags": [
+      "vegetarien",
+      "legumineuses",
+      "batch",
+      "au-four"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 250,
+        "unit": "g",
+        "name": "quinoa",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "pois chiches",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "patate douce",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "poivron jaune",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "courgette",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "cs",
+        "name": "tahini",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "citron",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "persil",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 200°C. Couper légumes en dés.",
+      "Mélanger légumes et pois chiches avec huile, sel. Rôtir 25 min.",
+      "Cuire le quinoa 12 min à l'eau bouillante salée. Égoutter.",
+      "Préparer la sauce: tahini, jus de citron, 4 cs d'eau, sel.",
+      "Mélanger quinoa, légumes rôtis, persil. Arroser de sauce au service."
+    ]
   }
 ]
