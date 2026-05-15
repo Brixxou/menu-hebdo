@@ -76,9 +76,16 @@ function renderDay(day, data, callbacks) {
     div.className = `meal ${meal.cooked ? 'cooked' : ''}`;
     div.innerHTML = `
       <div class="meal-label">${slotLabel}</div>
-      <div class="meal-title">${escapeHtml(recipe?.title ?? 'recette inconnue')}</div>
+      <div class="meal-row">
+        <div class="meal-title">${escapeHtml(recipe?.title ?? 'recette inconnue')}</div>
+        <button class="meal-more" aria-label="Plus d'actions">⋯</button>
+      </div>
       <div class="meal-meta">${recipe?.timeMin ?? '?'} min${meal.peopleOverride ? ` · pour ${meal.peopleOverride} pers.` : ''}</div>
     `;
+    div.querySelector('.meal-more').addEventListener('click', (e) => {
+      e.stopPropagation();
+      callbacks.onMealAction(day.day, slot);
+    });
     div.addEventListener('click', () => callbacks.onOpenRecipe(day.day, slot, meal.recipeId));
     card.appendChild(div);
   }

@@ -186,3 +186,13 @@ body {
 @media (min-width: 768px) {
   .day-list { display: grid; grid-template-columns: repeat(2, 1fr); }
 }
+.meal-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.meal-more {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 22px;
+  line-height: 1;
+  padding: 4px 8px;
+  cursor: pointer;
+}
