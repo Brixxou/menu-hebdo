@@ -5,6 +5,7 @@ import { formatQty } from '../utils.js';
 import { effectiveIngredients } from '../shopping.js';
 import { isInSeason } from '../seasonality.js';
 import { startTimer } from '../ui/timer.js';
+import { icons, populateIcons } from '../ui/icons.js';
 
 export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked, note, callbacks, meal, seasonality }) {
   const root = document.getElementById('modal-root');
@@ -14,11 +15,11 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked,
   const ingredients = meal ? effectiveIngredients(recipe, meal) : recipe.ingredients;
   sheet.innerHTML = `
     <div class="sheet" role="dialog" aria-modal="true">
-      <button class="sheet-close" aria-label="Fermer">✕</button>
+      <button class="sheet-close" aria-label="Fermer">${icons.close({ size: 16 })}</button>
       <div class="sheet-body">
         <header class="recipe-head">
           <h2>${escapeHtml(recipe.title)}</h2>
-          <button class="fav-toggle" aria-pressed="${isFavorite}">${isFavorite ? '★' : '☆'}</button>
+          <button class="fav-toggle" aria-pressed="${isFavorite}">${isFavorite ? icons.starFilled({ size: 24 }) : icons.star({ size: 24 })}</button>
         </header>
         <div class="recipe-meta">
           ${recipe.timeMin} min ·
@@ -48,7 +49,7 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked,
         </ol>
         <div class="cooked-row">
           <button class="btn-secondary cooked-toggle" aria-pressed="${isCooked}">
-            ${isCooked ? '✓ Repas fait' : 'Marquer comme fait'}
+            ${isCooked ? icons.check({ size: 16 }) + ' Repas fait' : 'Marquer comme fait'}
           </button>
         </div>
         <h3 class="section-h">Notes perso</h3>
@@ -57,6 +58,7 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked,
     </div>
   `;
   root.appendChild(sheet);
+  populateIcons(sheet);
 
   sheet.querySelector('.sheet-close').addEventListener('click', close);
   sheet.addEventListener('click', e => { if (e.target === sheet) close(); });
@@ -105,7 +107,7 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked,
 
 function linkifyTimers(html) {
   return html.replace(/\b(\d+)\s*(min|minutes)\b/g, (m, n) => {
-    return `<button class="timer-trigger" data-min="${n}" data-label="">⏱ ${n}min</button>`;
+    return `<button class="timer-trigger" data-min="${n}" data-label="">${icons.timer({ size: 14 })} ${n}min</button>`;
   });
 }
 

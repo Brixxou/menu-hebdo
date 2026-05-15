@@ -1,6 +1,9 @@
 // js/ui/tabs.js — switching d'onglets
 
+import { populateIcons } from './icons.js';
+
 export function initTabs() {
+  populateIcons(document);
   const buttons = document.querySelectorAll('.tab-btn');
   const views = document.querySelectorAll('.view');
   buttons.forEach(btn => {

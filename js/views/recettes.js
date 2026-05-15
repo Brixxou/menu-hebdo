@@ -1,5 +1,7 @@
 // js/views/recettes.js — bibliothèque consultable
 
+import { icons, populateIcons } from '../ui/icons.js';
+
 let _query = '';
 let _activeFilters = { slot: 'all', maxTime: null, tag: null, favoritesOnly: false };
 
@@ -14,7 +16,7 @@ export function renderRecettes(container, { state, data, callbacks }) {
       <button class="chip ${_activeFilters.slot === 'all' ? 'active' : ''}" data-slot="all">Tout</button>
       <button class="chip ${_activeFilters.slot === 'lunch' ? 'active' : ''}" data-slot="lunch">Midi</button>
       <button class="chip ${_activeFilters.slot === 'dinner' ? 'active' : ''}" data-slot="dinner">Soir</button>
-      <button class="chip ${_activeFilters.favoritesOnly ? 'active' : ''}" data-fav="1">★ Favoris</button>
+      <button class="chip chip-with-icon ${_activeFilters.favoritesOnly ? 'active' : ''}" data-fav="1"><span data-icon="star" data-icon-size="14"></span>Favoris</button>
       <button class="chip ${_activeFilters.maxTime === 15 ? 'active' : ''}" data-time="15">≤ 15 min</button>
       <button class="chip ${_activeFilters.maxTime === 20 ? 'active' : ''}" data-time="20">≤ 20 min</button>
       <button class="chip ${_activeFilters.maxTime === 30 ? 'active' : ''}" data-time="30">≤ 30 min</button>
@@ -60,13 +62,14 @@ export function renderRecettes(container, { state, data, callbacks }) {
     });
     gridWrap.innerHTML = filtered.map(r => `
       <article class="recipe-card" data-id="${r.id}">
-        <h3>${state.preferences.favorites.includes(r.id) ? '★ ' : ''}${escapeHtml(r.title)}</h3>
+        <h3>${state.preferences.favorites.includes(r.id) ? icons.starFilled({ size: 14 }) + ' ' : ''}${escapeHtml(r.title)}</h3>
         <p class="card-meta">${r.timeMin} min · ${(r.tags ?? []).slice(0, 2).join(' · ')}</p>
       </article>
     `).join('') || '<p class="empty-text">Aucune recette ne correspond.</p>';
     gridWrap.querySelectorAll('.recipe-card').forEach(c => {
       c.addEventListener('click', () => callbacks.onOpenRecipeStandalone(c.dataset.id));
     });
+    populateIcons(container);
   }
   renderGrid();
 }

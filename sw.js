@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'menu-hebdo-v1';
+const CACHE_VERSION = 'menu-hebdo-v2';
 
 const ASSETS = [
   './',
@@ -17,12 +17,15 @@ const ASSETS = [
   './js/ui/timer.js',
   './js/ui/share.js',
   './js/ui/shopping-mode.js',
+  './js/ui/icons.js',
   './js/views/semaine.js',
   './js/views/courses.js',
   './js/views/recettes.js',
   './js/views/recipe-modal.js',
   './js/views/wizard.js',
   './js/views/swap-modal.js',
+  './js/views/history.js',
+  './js/views/settings.js',
   './data/recipes.json',
   './data/menus.json',
   './data/seasonality.json',

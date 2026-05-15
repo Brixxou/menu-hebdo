@@ -1,6 +1,7 @@
 // js/views/wizard.js — wizard 3 étapes pour démarrer une nouvelle semaine
 
 import { buildShoppingList } from '../shopping.js';
+import { icons, populateIcons } from '../ui/icons.js';
 
 export function openWizard({ data, currentDefaults, callbacks }) {
   const root = document.getElementById('modal-root');
@@ -17,7 +18,7 @@ export function openWizard({ data, currentDefaults, callbacks }) {
     overlay.innerHTML = `
       <div class="wizard">
         <header class="wizard-head">
-          <button class="wizard-back" aria-label="Retour">${step > 1 ? '←' : '✕'}</button>
+          <button class="wizard-back" aria-label="Retour">${step > 1 ? icons.arrowLeft({ size: 22 }) : icons.close({ size: 22 })}</button>
           <div class="wizard-progress">${step} / 3</div>
         </header>
         <div class="wizard-body" id="wizard-body"></div>
@@ -74,10 +75,11 @@ export function openWizard({ data, currentDefaults, callbacks }) {
             <p>${escapeHtml(m.theme)}</p>
           </button>
         `).join('')}
-        <button class="menu-card menu-card-special" data-menu="random">🎲<br>Surprends-moi</button>
-        <button class="menu-card menu-card-special" data-menu="libre">🧑‍🍳<br>Composer librement</button>
+        <button class="menu-card menu-card-special" data-menu="random"><span data-icon="shuffle" data-icon-size="24"></span><span>Surprends-moi</span></button>
+        <button class="menu-card menu-card-special" data-menu="libre"><span data-icon="edit" data-icon-size="24"></span><span>Composer librement</span></button>
       </div>
     `;
+    populateIcons(body);
     body.querySelectorAll('.menu-card').forEach(card => {
       card.addEventListener('click', () => {
         const id = card.dataset.menu;

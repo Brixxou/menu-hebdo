@@ -1,12 +1,14 @@
 // js/views/settings.js — petit modal de réglages
 
+import { icons, populateIcons } from '../ui/icons.js';
+
 export function openSettings({ state, onChange }) {
   const root = document.getElementById('modal-root');
   const overlay = document.createElement('div');
   overlay.className = 'sheet-overlay';
   overlay.innerHTML = `
     <div class="sheet" role="dialog" aria-modal="true">
-      <button class="sheet-close" aria-label="Fermer">✕</button>
+      <button class="sheet-close" aria-label="Fermer">${icons.close({ size: 16 })}</button>
       <div class="sheet-body">
         <h2>Réglages</h2>
         <label class="row">
@@ -30,4 +32,5 @@ export function openSettings({ state, onChange }) {
     onChange({ defaultPeople: n });
   });
   root.appendChild(overlay);
+  populateIcons(overlay);
 }

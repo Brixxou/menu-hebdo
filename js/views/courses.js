@@ -3,6 +3,7 @@
 import { buildShoppingList } from '../shopping.js';
 import { ingredientKey } from '../keys.js';
 import { formatQty } from '../utils.js';
+import { populateIcons } from '../ui/icons.js';
 
 export function renderCourses(container, { state, data, callbacks }) {
   container.innerHTML = '';
@@ -18,8 +19,8 @@ export function renderCourses(container, { state, data, callbacks }) {
   header.innerHTML = `
     <div class="courses-stats">${totalItems} articles · ${list.length} rayons</div>
     <div class="courses-actions">
-      <button class="btn-secondary" id="btn-shopping-mode">🔍 Supermarché</button>
-      <button class="btn-secondary" id="btn-share">📤 Partager</button>
+      <button class="btn-secondary" id="btn-shopping-mode"><span data-icon="shoppingMode" data-icon-size="16"></span>Mode supermarché</button>
+      <button class="btn-secondary" id="btn-share"><span data-icon="share" data-icon-size="16"></span>Partager</button>
       <button class="btn-secondary" id="btn-uncheck-all">Tout décocher</button>
     </div>
   `;
@@ -31,6 +32,7 @@ export function renderCourses(container, { state, data, callbacks }) {
   for (const cat of list) {
     container.appendChild(renderCategory(cat, state, callbacks));
   }
+  populateIcons(container);
 
   // Drag & drop des rayons (desktop) + fallback ▲▼ (mobile)
   let draggedCategory = null;
@@ -112,13 +114,13 @@ function renderCategory(cat, state, callbacks) {
 }
 
 const LABELS = {
-  'fruits-legumes': '🥬 Fruits & légumes',
-  'viandes-poissons': '🐟 Viandes & poissons',
-  'pains-pates': '🥖 Pains & pâtes',
-  'frais': '🥚 Frais',
-  'epicerie': '🍝 Épicerie',
-  'epices': '🫒 Épices & huiles',
-  'en-cas': '🥜 En-cas'
+  'fruits-legumes': 'Fruits & légumes',
+  'viandes-poissons': 'Viandes & poissons',
+  'pains-pates': 'Pains & pâtes',
+  'frais': 'Frais',
+  'epicerie': 'Épicerie',
+  'epices': 'Épices & huiles',
+  'en-cas': 'En-cas'
 };
 function labelForCategory(c) { return LABELS[c] ?? c; }
 

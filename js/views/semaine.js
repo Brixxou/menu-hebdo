@@ -1,5 +1,7 @@
 // js/views/semaine.js — rendu de l'onglet Semaine
 
+import { icons, populateIcons } from '../ui/icons.js';
+
 export function renderSemaine(container, { state, data, callbacks }) {
   container.innerHTML = '';
   if (!state.activeWeek) {
@@ -7,6 +9,7 @@ export function renderSemaine(container, { state, data, callbacks }) {
     return;
   }
   container.appendChild(renderWeek(state, data, callbacks));
+  populateIcons(container);
 }
 
 function renderEmpty({ onStartWeek }) {
@@ -80,7 +83,7 @@ function renderDay(day, data, callbacks) {
       <div class="meal-label">${slotLabel}</div>
       <div class="meal-row">
         <div class="meal-title">${escapeHtml(recipe?.title ?? 'recette inconnue')}</div>
-        <button class="meal-more" aria-label="Plus d'actions">⋯</button>
+        <button class="meal-more" aria-label="Plus d'actions">${icons.more({ size: 18 })}</button>
       </div>
       <div class="meal-meta">${recipe?.timeMin ?? '?'} min${meal.peopleOverride ? ` · pour ${meal.peopleOverride} pers.` : ''}</div>
     `;

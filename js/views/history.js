@@ -1,12 +1,14 @@
 // js/views/history.js — modal liste des semaines archivées
 
+import { icons, populateIcons } from '../ui/icons.js';
+
 export function openHistory({ history, data, onRestart, onClose }) {
   const root = document.getElementById('modal-root');
   const overlay = document.createElement('div');
   overlay.className = 'sheet-overlay';
   overlay.innerHTML = `
     <div class="sheet" role="dialog" aria-modal="true">
-      <button class="sheet-close" aria-label="Fermer">✕</button>
+      <button class="sheet-close" aria-label="Fermer">${icons.close({ size: 16 })}</button>
       <div class="sheet-body">
         <h2>Historique</h2>
         ${history.length === 0 ? '<p class="empty-text">Aucune semaine archivée.</p>' : `
@@ -32,6 +34,7 @@ export function openHistory({ history, data, onRestart, onClose }) {
     });
   });
   root.appendChild(overlay);
+  populateIcons(overlay);
 }
 
 function escapeHtml(s) {

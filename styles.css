@@ -592,6 +592,47 @@ body.shopping-mode .shopping-exit {
 .row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--separator); }
 .row select, .row input { font: inherit; padding: 6px 10px; border: 1px solid var(--separator); border-radius: 6px; background: var(--surface); }
 
+/* === SVG icons inline === */
+.tab-icon { display: inline-flex; align-items: center; justify-content: center; }
+.tab-icon svg { stroke-width: 2; }
+.menu-card-special {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px 16px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.3;
+}
+.menu-card-special [data-icon] { color: var(--accent); display: inline-flex; }
+.menu-card-special [data-icon] svg { display: block; }
+button [data-icon] svg { vertical-align: middle; }
+.btn-secondary [data-icon] {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.btn-secondary [data-icon] svg { display: block; }
+.chip-with-icon { display: inline-flex; align-items: center; gap: 4px; }
+.chip-with-icon [data-icon] { display: inline-flex; }
+.fav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+.fav-toggle svg { display: block; }
+.sheet-close { display: inline-flex; align-items: center; justify-content: center; }
+.sheet-close svg { display: block; }
+.meal-more { display: inline-flex; align-items: center; justify-content: center; }
+.meal-more svg { display: block; }
+.timer-trigger svg { vertical-align: middle; }
+#timer-banner .timer-icon { display: inline-flex; color: rgba(255,255,255,0.85); }
+#timer-banner .timer-icon svg { display: block; }
+#timer-banner .timer-row button { display: inline-flex; align-items: center; justify-content: center; }
+#timer-banner .timer-row button svg { display: block; }
+#btn-settings { display: inline-flex; align-items: center; justify-content: center; }
+#btn-settings svg { display: block; }
+.wizard-back { display: inline-flex; align-items: center; justify-content: center; }
+.wizard-back svg { display: block; }
+
 [data-theme="terracotta"] {
   --bg: #f4ede0;
   --surface: #faf5ea;

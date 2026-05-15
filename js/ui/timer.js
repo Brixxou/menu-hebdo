@@ -1,5 +1,7 @@
 // js/ui/timer.js — timers empilés dans une bannière fixe
 
+import { icons } from './icons.js';
+
 const timers = new Map(); // id -> { label, remaining, intervalId }
 let nextId = 1;
 
@@ -25,7 +27,7 @@ function render() {
     row.className = 'timer-row';
     const mm = String(Math.floor(t.remaining / 60)).padStart(2, '0');
     const ss = String(t.remaining % 60).padStart(2, '0');
-    row.innerHTML = `<span>${escapeHtml(t.label)}</span><strong>${mm}:${ss}</strong><button data-id="${id}">✕</button>`;
+    row.innerHTML = `<span class="timer-icon">${icons.timer({ size: 16 })}</span><span>${escapeHtml(t.label)}</span><strong>${mm}:${ss}</strong><button data-id="${id}" aria-label="Annuler">${icons.close({ size: 14 })}</button>`;
     row.querySelector('button').addEventListener('click', () => cancelTimer(id));
     banner.appendChild(row);
   }
@@ -40,7 +42,7 @@ function tick(id) {
     timers.delete(id);
     render();
     if (navigator.vibrate) navigator.vibrate([300, 100, 300, 100, 300]);
-    setTimeout(() => alert(`⏱ Terminé : ${t.label}`), 50);
+    setTimeout(() => alert(`Terminé : ${t.label}`), 50);
     return;
   }
   render();

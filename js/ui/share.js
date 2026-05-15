@@ -4,13 +4,13 @@ import { formatQty } from '../utils.js';
 import { ingredientKey } from '../keys.js';
 
 const LABELS = {
-  'fruits-legumes': '🥬 Fruits & légumes',
-  'viandes-poissons': '🐟 Viandes & poissons',
-  'pains-pates': '🥖 Pains & pâtes',
-  'frais': '🥚 Frais',
-  'epicerie': '🍝 Épicerie',
-  'epices': '🫒 Épices & huiles',
-  'en-cas': '🥜 En-cas'
+  'fruits-legumes': 'Fruits & légumes',
+  'viandes-poissons': 'Viandes & poissons',
+  'pains-pates': 'Pains & pâtes',
+  'frais': 'Frais',
+  'epicerie': 'Épicerie',
+  'epices': 'Épices & huiles',
+  'en-cas': 'En-cas'
 };
 
 export function shoppingListToText(list, state) {
