@@ -13,6 +13,10 @@ import { buildShoppingList } from './js/shopping.js';
 
 const state = createState();
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(err => console.error('SW failed:', err));
+}
+
 let _dataCache;
 async function main() {
   _dataCache = await loadData();
