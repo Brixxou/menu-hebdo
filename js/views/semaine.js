@@ -62,10 +62,17 @@ function renderWeek(state, data, callbacks) {
   return wrap;
 }
 
+const FRENCH_DAYS = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+
+function todayDayName() {
+  return FRENCH_DAYS[new Date().getDay()];
+}
+
 function renderDay(day, data, callbacks) {
   const card = document.createElement('article');
-  card.className = 'day-card';
-  card.innerHTML = `<h3>${day.day}</h3>`;
+  const isToday = day.day === todayDayName();
+  card.className = `day-card${isToday ? ' day-today' : ''}`;
+  card.innerHTML = `<h3>${day.day}${isToday ? ' <span class="today-badge">Aujourd\'hui</span>' : ''}</h3>`;
   for (const slot of ['lunch', 'dinner']) {
     const meal = day[slot];
     const slotLabel = slot === 'lunch' ? 'Midi' : 'Soir';

@@ -1,4 +1,4 @@
-import { initTabs } from './js/ui/tabs.js';
+import { initTabs, switchTab } from './js/ui/tabs.js';
 import { createState } from './js/state.js';
 import { loadData } from './js/data.js';
 import { renderSemaine } from './js/views/semaine.js';
@@ -215,6 +215,7 @@ function rerender() {
       state.mutate(d => { d.shoppingList.checked = {}; });
       rerender();
     },
+    onGoToSemaine: () => switchTab('semaine'),
     onShare: async () => {
       const s = state.load();
       if (!s.activeWeek) return;
@@ -264,6 +265,7 @@ function rerender() {
 document.addEventListener('DOMContentLoaded', main);
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('app-title').addEventListener('click', () => switchTab('semaine'));
   document.getElementById('btn-settings').addEventListener('click', () => {
     openSettings({
       state: state.load(),

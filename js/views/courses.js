@@ -8,7 +8,14 @@ import { populateIcons } from '../ui/icons.js';
 export function renderCourses(container, { state, data, callbacks }) {
   container.innerHTML = '';
   if (!state.activeWeek) {
-    container.innerHTML = `<p class="empty-text">Démarre une semaine pour générer ta liste de courses.</p>`;
+    const empty = document.createElement('div');
+    empty.className = 'courses-empty';
+    empty.innerHTML = `
+      <p class="empty-text">Aucune <em class="italic">semaine</em> en cours.<br>Démarre une semaine pour générer ta liste de courses.</p>
+      <button class="btn-primary" id="btn-go-semaine">Aller au menu de la semaine</button>
+    `;
+    empty.querySelector('#btn-go-semaine').addEventListener('click', () => callbacks.onGoToSemaine());
+    container.appendChild(empty);
     return;
   }
   const list = buildShoppingList(state.activeWeek, data.recipesById, state.preferences.aisleOrder);

@@ -1039,3 +1039,61 @@ body.shopping-mode .cat-list li.checked .check { background: var(--olive); borde
   line-height: 1.6;
   margin-top: 8px;
 }
+
+/* === Improvements: today highlight, courses empty CTA, title button === */
+#app-title {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  transition: color 0.15s;
+}
+#app-title:hover, #app-title:active { color: var(--terracotta); }
+
+.day-card.day-today {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 2px rgba(194, 86, 42, 0.10), var(--shadow-card);
+  background: linear-gradient(to bottom, rgba(194, 86, 42, 0.04), var(--paper));
+}
+.day-card.day-today h3 {
+  color: var(--terracotta-deep);
+}
+.today-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px 10px;
+  background: var(--terracotta);
+  color: var(--paper);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.courses-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 64px 24px;
+  gap: 24px;
+}
+.courses-empty .empty-text {
+  padding: 0;
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 320px;
+}

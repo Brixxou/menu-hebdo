@@ -4,14 +4,13 @@ import { populateIcons } from './icons.js';
 
 export function initTabs() {
   populateIcons(document);
-  const buttons = document.querySelectorAll('.tab-btn');
-  const views = document.querySelectorAll('.view');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.target;
-      buttons.forEach(b => b.classList.toggle('active', b === btn));
-      views.forEach(v => v.classList.toggle('active', v.dataset.tab === target));
-      window.scrollTo({ top: 0 });
-    });
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchTab(btn.dataset.target));
   });
+}
+
+export function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.target === name));
+  document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.dataset.tab === name));
+  window.scrollTo({ top: 0 });
 }
