@@ -368,3 +368,15 @@ body {
   font-weight: 700;
   color: var(--accent);
 }
+
+.sheet-tall { max-height: 95vh; }
+.swap-actions { display: flex; gap: 8px; margin: 12px 0 16px; }
+.swap-actions .btn-secondary { flex: 1; padding: 10px; font-size: 14px; }
+.swap-list { list-style: none; }
+.swap-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--separator);
+  cursor: pointer;
+}
+.swap-title { font-size: 16px; }
+.swap-meta { font-size: 13px; color: var(--text-muted); margin-top: 2px; }

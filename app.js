@@ -4,6 +4,7 @@ import { loadData } from './js/data.js';
 import { renderSemaine } from './js/views/semaine.js';
 import { openRecipeModal } from './js/views/recipe-modal.js';
 import { openWizard } from './js/views/wizard.js';
+import { openSwapModal } from './js/views/swap-modal.js';
 
 const state = createState();
 
@@ -74,9 +75,16 @@ function rerender() {
         },
         callbacks: {
           onPickRecipeForSlot: (day, slot, draft, done) => {
-            // TODO Task 23 : ouvrir le swap modal
-            const id = prompt('ID de recette ?');
-            done(id || null);
+            const currentId = draft.days.find(d => d.day === day)[slot]?.recipeId;
+            const menu = draft.menuId ? _dataCache.menusById[draft.menuId] : null;
+            openSwapModal({
+              data: _dataCache,
+              slot,
+              currentRecipeId: currentId,
+              defaultConstraints: menu?.defaultConstraints,
+              favorites: state.load().preferences.favorites,
+              onPick: (newId) => done(newId)
+            });
           },
           onValidate: (draft) => {
             state.archiveAndStart(draft);
@@ -99,7 +107,23 @@ function rerender() {
         });
         rerender();
       } else if (action === 'swap') {
-        console.log('TODO: open swap modal', day, slot);
+        const cur = state.load();
+        const meal = cur.activeWeek.days.find(x => x.day === day)[slot];
+        const menu = cur.activeWeek.menuId ? _dataCache.menusById[cur.activeWeek.menuId] : null;
+        openSwapModal({
+          data: _dataCache,
+          slot,
+          currentRecipeId: meal?.recipeId,
+          defaultConstraints: menu?.defaultConstraints,
+          favorites: cur.preferences.favorites,
+          onPick: (newId) => {
+            state.mutate(d => {
+              const dayObj = d.activeWeek.days.find(x => x.day === day);
+              dayObj[slot] = { recipeId: newId, peopleOverride: null, cooked: false };
+            });
+            rerender();
+          }
+        });
       }
     },
     onChangePeopleForMeal: (day, slot, n) => {
