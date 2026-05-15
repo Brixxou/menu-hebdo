@@ -32,6 +32,13 @@ function rerender() {
       } else if (action === 'swap') {
         console.log('TODO: open swap modal', day, slot);
       }
+    },
+    onChangePeopleForMeal: (day, slot, n) => {
+      state.mutate(d => {
+        const dayObj = d.activeWeek.days.find(x => x.day === day);
+        if (dayObj && dayObj[slot]) dayObj[slot].peopleOverride = n;
+      });
+      rerender();
     }
   };
   renderSemaine(document.getElementById('view-semaine'), { state: s, data: _dataCache, callbacks });
