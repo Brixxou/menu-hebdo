@@ -1,5 +1,7 @@
 // js/views/wizard.js — wizard 3 étapes pour démarrer une nouvelle semaine
 
+import { buildShoppingList } from '../shopping.js';
+
 export function openWizard({ data, currentDefaults, callbacks }) {
   const root = document.getElementById('modal-root');
   root.innerHTML = '';
@@ -142,6 +144,14 @@ export function openWizard({ data, currentDefaults, callbacks }) {
         <div><span class="big">${totalTime}</span><br>min de cuisine</div>
       </div>
       <p class="wizard-help">Une fois validée, l'ancienne semaine sera archivée et la liste de courses sera générée.</p>
+    `;
+    const list = buildShoppingList(draft, data.recipesById, currentDefaults.aisleOrder ?? ['fruits-legumes','viandes-poissons','pains-pates','frais','epicerie','epices','en-cas']);
+    const totalItems = list.reduce((s, c) => s + c.items.length, 0);
+    body.innerHTML += `
+      <div class="wizard-preview">
+        <h3 class="section-h">Aperçu liste de courses</h3>
+        <p>${totalItems} articles dans ${list.length} rayons.</p>
+      </div>
     `;
   }
 

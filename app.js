@@ -68,7 +68,10 @@ function rerender() {
       const cur = state.load();
       openWizard({
         data: _dataCache,
-        currentDefaults: { peopleGlobal: cur.activeWeek?.peopleGlobal ?? cur.preferences.defaultPeople },
+        currentDefaults: {
+          peopleGlobal: cur.activeWeek?.peopleGlobal ?? cur.preferences.defaultPeople,
+          aisleOrder: cur.preferences.aisleOrder
+        },
         callbacks: {
           onPickRecipeForSlot: (day, slot, draft, done) => {
             // TODO Task 23 : ouvrir le swap modal
