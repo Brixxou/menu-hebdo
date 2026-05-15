@@ -3,6 +3,11 @@
 import { scaleIngredient } from './scaling.js';
 import { ingredientKey } from './keys.js';
 
+export function effectiveIngredients(recipe, meal) {
+  const subs = meal?.substitutes ?? {};
+  return recipe.ingredients.map(ing => subs[ing.name] ? { ...ing, name: subs[ing.name] } : ing);
+}
+
 export function buildShoppingList(week, recipesById, aisleOrder) {
   const buckets = new Map(); // key -> aggregated ingredient
 
@@ -14,7 +19,7 @@ export function buildShoppingList(week, recipesById, aisleOrder) {
       if (!recipe) continue;
       const targetPeople = meal.peopleOverride ?? week.peopleGlobal;
 
-      for (const ing of recipe.ingredients) {
+      for (const ing of effectiveIngredients(recipe, meal)) {
         const scaled = scaleIngredient(ing, recipe.basePeople, targetPeople);
         const key = ingredientKey(ing);
         if (buckets.has(key)) {

@@ -27,6 +27,7 @@ function openRecipeFor(day, slot, recipeId) {
   const peopleEffective = meal.peopleOverride ?? cur.activeWeek.peopleGlobal;
   openRecipeModal({
     recipe,
+    meal,
     peopleEffective,
     isFavorite: cur.preferences.favorites.includes(recipeId),
     isCooked: !!meal.cooked,
@@ -62,6 +63,16 @@ function openRecipeFor(day, slot, recipeId) {
           if (!d.activeWeek.notes) d.activeWeek.notes = {};
           d.activeWeek.notes[recipeId] = text;
         });
+      },
+      onSubstitute: (origName, newName) => {
+        state.mutate(d => {
+          const dayObj = d.activeWeek.days.find(x => x.day === day);
+          const m = dayObj[slot];
+          m.substitutes = m.substitutes ?? {};
+          m.substitutes[origName] = newName;
+        });
+        rerender();
+        openRecipeFor(day, slot, recipeId);
       }
     }
   });
@@ -88,7 +99,8 @@ function openRecipeStandalone(recipeId) {
       },
       onPeopleOverride: () => {},
       onNoteChange: () => {},
-      onToggleCooked: () => {}
+      onToggleCooked: () => {},
+      onSubstitute: () => {}
     }
   });
 }

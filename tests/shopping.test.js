@@ -1,7 +1,7 @@
 // tests/shopping.test.js
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { buildShoppingList } from '../js/shopping.js';
+import { buildShoppingList, effectiveIngredients } from '../js/shopping.js';
 
 const recipeA = {
   id: 'a', basePeople: 4,
@@ -71,4 +71,12 @@ test('buildShoppingList: ignore les slots vides', () => {
   const list = buildShoppingList(week, recipes, ['fruits-legumes', 'epicerie']);
   const flat = list.flatMap(c => c.items);
   assert.strictEqual(flat.length, 2);
+});
+
+test('effectiveIngredients: applique les substitutions du meal', () => {
+  const recipe = { ingredients: [{ qty: 100, unit: 'g', name: 'linguine', category: 'epicerie', scalable: true }] };
+  const meal = { substitutes: { linguine: 'spaghetti' } };
+  const eff = effectiveIngredients(recipe, meal);
+  assert.strictEqual(eff[0].name, 'spaghetti');
+  assert.strictEqual(eff[0].qty, 100);  // unchanged
 });
