@@ -6,6 +6,7 @@ import { openRecipeModal } from './js/views/recipe-modal.js';
 import { openWizard } from './js/views/wizard.js';
 import { openSwapModal } from './js/views/swap-modal.js';
 import { renderCourses } from './js/views/courses.js';
+import { enterShoppingMode, exitShoppingMode } from './js/ui/shopping-mode.js';
 
 const state = createState();
 
@@ -147,7 +148,17 @@ function rerender() {
       rerender();
     },
     onShare: () => console.log('TODO: share'),
-    onShoppingMode: () => console.log('TODO: shopping mode'),
+    onShoppingMode: () => {
+      enterShoppingMode();
+      let exitBtn = document.querySelector('.shopping-exit');
+      if (!exitBtn) {
+        exitBtn = document.createElement('button');
+        exitBtn.className = 'shopping-exit';
+        exitBtn.textContent = 'Sortir';
+        exitBtn.addEventListener('click', () => { exitShoppingMode(); exitBtn.remove(); });
+        document.body.appendChild(exitBtn);
+      }
+    },
     onReorderAisles: (movedCat, targetCat) => {
       state.mutate(d => {
         const order = d.preferences.aisleOrder.slice();

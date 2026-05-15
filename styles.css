@@ -437,3 +437,33 @@ body {
 .item-qty { color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 14px; }
 .course-cat.dragging { opacity: 0.5; }
 .cat-move { background: none; border: none; padding: 2px 4px; color: var(--text-muted); cursor: pointer; font-size: 11px; }
+
+/* === Mode supermarché === */
+body.shopping-mode {
+  background: #000;
+  color: #fff;
+}
+body.shopping-mode .tab-bar,
+body.shopping-mode .app-header,
+body.shopping-mode .courses-header {
+  display: none;
+}
+body.shopping-mode #view-courses {
+  padding: 16px;
+}
+body.shopping-mode .course-cat {
+  background: #1c1c1e;
+  box-shadow: none;
+}
+body.shopping-mode .cat-head h3 { font-size: 24px; }
+body.shopping-mode .item-name { font-size: 22px; }
+body.shopping-mode .item-qty { font-size: 18px; color: #8e8e93; }
+body.shopping-mode .check { width: 32px; height: 32px; border-width: 2px; }
+body.shopping-mode .cat-list li { padding: 16px 0; }
+body.shopping-mode .shopping-exit {
+  position: fixed; top: env(safe-area-inset-top); right: 12px;
+  background: #fff; color: #000;
+  border: none; padding: 10px 16px;
+  border-radius: 20px; font-size: 15px; font-weight: 600;
+  z-index: 30; cursor: pointer;
+}
