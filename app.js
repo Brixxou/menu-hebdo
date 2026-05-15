@@ -3,6 +3,7 @@ import { createState } from './js/state.js';
 import { loadData } from './js/data.js';
 import { renderSemaine } from './js/views/semaine.js';
 import { openRecipeModal } from './js/views/recipe-modal.js';
+import { openWizard } from './js/views/wizard.js';
 
 const state = createState();
 
@@ -63,7 +64,24 @@ function openRecipeFor(day, slot, recipeId) {
 function rerender() {
   const s = state.load();
   const callbacks = {
-    onStartWeek: () => console.log('TODO: wizard'),
+    onStartWeek: () => {
+      const cur = state.load();
+      openWizard({
+        data: _dataCache,
+        currentDefaults: { peopleGlobal: cur.activeWeek?.peopleGlobal ?? cur.preferences.defaultPeople },
+        callbacks: {
+          onPickRecipeForSlot: (day, slot, draft, done) => {
+            // TODO Task 23 : ouvrir le swap modal
+            const id = prompt('ID de recette ?');
+            done(id || null);
+          },
+          onValidate: (draft) => {
+            state.archiveAndStart(draft);
+            rerender();
+          }
+        }
+      });
+    },
     onChangePeople: (n) => {
       state.mutate(d => { if (d.activeWeek) d.activeWeek.peopleGlobal = n; });
       rerender();
