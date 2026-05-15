@@ -633,6 +633,27 @@ button [data-icon] svg { vertical-align: middle; }
 .wizard-back { display: inline-flex; align-items: center; justify-content: center; }
 .wizard-back svg { display: block; }
 
+/* === Menu cards avec cover image (wizard étape 1) === */
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  min-height: 180px;
+}
+.menu-card-cover {
+  height: 100px;
+  background: linear-gradient(135deg, #f4ede0, #d4c4a8);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+.menu-card-body { padding: 12px 14px; text-align: left; }
+.menu-card-body h3 { font-size: 16px; font-weight: 600; margin-bottom: 2px; }
+.menu-card-body p { font-size: 13px; color: var(--text-muted); }
+.menu-card.menu-card-special { padding: 24px 16px; min-height: 180px; }
+.menu-card.menu-card-special .menu-card-cover { display: none; }
+
 [data-theme="terracotta"] {
   --bg: #f4ede0;
   --surface: #faf5ea;

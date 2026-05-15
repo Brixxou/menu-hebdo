@@ -69,12 +69,17 @@ export function openWizard({ data, currentDefaults, callbacks }) {
     body.innerHTML = `
       <h2 class="wizard-title">Choisis ton menu</h2>
       <div class="menu-grid">
-        ${sortedMenus.map(m => `
+        ${sortedMenus.map(m => {
+          const coverStyle = m.cover ? `style="background-image: url('${m.cover}');"` : '';
+          return `
           <button class="menu-card ${selectedMenuId === m.id ? 'selected' : ''}" data-menu="${m.id}">
-            <h3>${escapeHtml(m.name)}</h3>
-            <p>${escapeHtml(m.theme)}</p>
+            <div class="menu-card-cover" ${coverStyle}></div>
+            <div class="menu-card-body">
+              <h3>${escapeHtml(m.name)}</h3>
+              <p>${escapeHtml(m.theme)}</p>
+            </div>
           </button>
-        `).join('')}
+        `;}).join('')}
         <button class="menu-card menu-card-special" data-menu="random"><span data-icon="shuffle" data-icon-size="24"></span><span>Surprends-moi</span></button>
         <button class="menu-card menu-card-special" data-menu="libre"><span data-icon="edit" data-icon-size="24"></span><span>Composer librement</span></button>
       </div>

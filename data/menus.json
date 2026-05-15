@@ -3,6 +3,7 @@
     "id": "mediterraneen",
     "name": "Méditerranéen",
     "theme": "Sud, soleil, huile d'olive",
+    "cover": "https://source.unsplash.com/featured/600x400/?mediterranean,food",
     "defaultConstraints": [
       "sans-lactose"
     ],
@@ -52,6 +53,7 @@
     "id": "asiatique-express",
     "name": "Asiatique express",
     "theme": "Wok, herbes fraîches, citron vert",
+    "cover": "https://source.unsplash.com/featured/600x400/?asian,noodles",
     "defaultConstraints": [
       "sans-lactose"
     ],
@@ -98,6 +100,7 @@
     "id": "hiver-reconfort",
     "name": "Hiver réconfort",
     "theme": "Soupes, mijotés, plats au four",
+    "cover": "https://source.unsplash.com/featured/600x400/?winter,stew,soup",
     "defaultConstraints": [
       "sans-lactose"
     ],
