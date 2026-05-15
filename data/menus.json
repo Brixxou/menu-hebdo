@@ -1,0 +1,18 @@
+[
+  {
+    "id": "mediterraneen",
+    "name": "Méditerranéen",
+    "theme": "Sud, soleil, huile d'olive",
+    "defaultConstraints": ["sans-lactose"],
+    "seasons": ["printemps", "ete"],
+    "days": [
+      { "day": "Lundi",    "lunch": "salade-pois-chiches",   "dinner": "pates-crevettes-ail" },
+      { "day": "Mardi",    "lunch": "wrap-thon",             "dinner": "poulet-citron-origan" },
+      { "day": "Mercredi", "lunch": "bowl-quinoa-lentilles", "dinner": "cabillaud-cap-olives" },
+      { "day": "Jeudi",    "lunch": "salade-nicoise",        "dinner": "omelette-courgettes" },
+      { "day": "Vendredi", "lunch": "pita-falafels",         "dinner": "saumon-papillote" },
+      { "day": "Samedi",   "lunch": "pizza-fine",            "dinner": "souvlaki-poulet" },
+      { "day": "Dimanche", "lunch": "tajine-poulet",         "dinner": "minestrone" }
+    ]
+  }
+]

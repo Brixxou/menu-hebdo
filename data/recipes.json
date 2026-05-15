@@ -1,0 +1,392 @@
+[
+  {
+    "id": "pates-crevettes-ail",
+    "title": "Pâtes aux crevettes, ail & tomates cerises",
+    "slot": "dinner",
+    "timeMin": 15,
+    "description": "Le plat italien express par excellence. Crevettes saisies dans l'huile d'olive parfumée à l'ail, tomates cerises qui fondent en sauce, basilic frais en finition.",
+    "tags": ["italien", "une-poele", "rapide"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 400, "unit": "g", "name": "linguine", "category": "epicerie", "scalable": true },
+      { "qty": 500, "unit": "g", "name": "crevettes décortiquées", "category": "viandes-poissons", "scalable": true },
+      { "qty": 400, "unit": "g", "name": "tomates cerises", "category": "fruits-legumes", "scalable": true },
+      { "qty": 4, "unit": "gousse", "name": "ail", "category": "fruits-legumes", "scalable": true },
+      { "qty": null, "unit": null, "name": "piment d'Espelette", "category": "epices", "scalable": false },
+      { "qty": 1, "unit": "botte", "name": "basilic frais", "category": "fruits-legumes", "scalable": false },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false },
+      { "qty": null, "unit": null, "name": "sel, poivre", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Lancer l'eau des pâtes, salée, et cuire les linguine.",
+      "Chauffer 4 c. à s. d'huile d'olive, faire dorer l'ail émincé et le piment 1 min.",
+      "Ajouter les tomates cerises coupées en deux, écraser 5 min à feu vif.",
+      "Saisir les crevettes 2-3 min dans la sauce.",
+      "Verser les pâtes égouttées, mélanger avec une louche d'eau de cuisson, basilic ciselé."
+    ]
+  },
+  {
+    "id": "poulet-citron-origan",
+    "title": "Poulet mariné citron-origan & taboulé libanais",
+    "slot": "dinner",
+    "timeMin": 20,
+    "description": "Filets de poulet juteux, marinés à la grecque, à servir avec un taboulé frais où le persil est roi.",
+    "tags": ["grec", "libanais", "convivial"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 4, "unit": "filet", "name": "poulet", "category": "viandes-poissons", "scalable": true },
+      { "qty": 2, "unit": null, "name": "citrons (jus + zeste)", "category": "fruits-legumes", "scalable": true },
+      { "qty": 2, "unit": "cs", "name": "origan séché", "category": "epices", "scalable": false },
+      { "qty": 3, "unit": "gousse", "name": "ail", "category": "fruits-legumes", "scalable": true },
+      { "qty": 200, "unit": "g", "name": "semoule fine", "category": "epicerie", "scalable": true },
+      { "qty": 2, "unit": "botte", "name": "persil plat", "category": "fruits-legumes", "scalable": false },
+      { "qty": 1, "unit": "botte", "name": "menthe", "category": "fruits-legumes", "scalable": false },
+      { "qty": 4, "unit": null, "name": "tomates", "category": "fruits-legumes", "scalable": true },
+      { "qty": 1, "unit": null, "name": "oignon rouge", "category": "fruits-legumes", "scalable": true },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false },
+      { "qty": null, "unit": null, "name": "sel", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Mariner le poulet (citron, ail, origan, huile, sel) 10 min minimum.",
+      "Hydrater la semoule avec 200 ml d'eau froide + jus de citron, laisser gonfler.",
+      "Hacher finement persil, menthe, tomates, oignon. Mélanger à la semoule, huile d'olive généreuse.",
+      "Saisir le poulet à la poêle bien chaude, 4-5 min par face.",
+      "Trancher, servir sur le taboulé."
+    ]
+  },
+  {
+    "id": "cabillaud-cap-olives",
+    "title": "Cabillaud sauce vierge aux câpres & olives",
+    "slot": "dinner",
+    "timeMin": 20,
+    "description": "Filets de cabillaud nacrés, fondants dans une sauce tomate vive avec câpres, olives noires et un trait de citron.",
+    "tags": ["poisson", "une-poele", "mediterraneen"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 600, "unit": "g", "name": "filets de cabillaud", "category": "viandes-poissons", "scalable": true },
+      { "qty": 400, "unit": "g", "name": "tomates concassées (boîte)", "category": "epicerie", "scalable": true },
+      { "qty": 2, "unit": "cs", "name": "câpres", "category": "epicerie", "scalable": false },
+      { "qty": 100, "unit": "g", "name": "olives noires Kalamata", "category": "epicerie", "scalable": true },
+      { "qty": 3, "unit": "gousse", "name": "ail", "category": "fruits-legumes", "scalable": true },
+      { "qty": 250, "unit": "g", "name": "riz basmati", "category": "epicerie", "scalable": true },
+      { "qty": 1, "unit": "botte", "name": "persil plat", "category": "fruits-legumes", "scalable": false },
+      { "qty": 1, "unit": null, "name": "citron", "category": "fruits-legumes", "scalable": false },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Lancer la cuisson du riz basmati (12 min).",
+      "Dans une grande poêle, faire revenir l'ail dans l'huile, ajouter tomates, câpres, olives. Laisser réduire 8 min.",
+      "Déposer les filets de cabillaud dans la sauce, couvrir, cuire 6-7 min à feu doux.",
+      "Finir avec persil et jus de citron. Servir avec le riz."
+    ]
+  },
+  {
+    "id": "omelette-courgettes",
+    "title": "Omelette aux courgettes, oignons & herbes",
+    "slot": "dinner",
+    "timeMin": 15,
+    "description": "Inspirée du kuku sabzi iranien et de la frittata. Œufs bien battus, courgettes fondantes, herbes en pluie.",
+    "tags": ["vegetarien", "economique", "rapide"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 8, "unit": "oeuf", "name": "œufs", "category": "frais", "scalable": true },
+      { "qty": 2, "unit": null, "name": "courgettes moyennes", "category": "fruits-legumes", "scalable": true },
+      { "qty": 1, "unit": null, "name": "oignon", "category": "fruits-legumes", "scalable": true },
+      { "qty": 1, "unit": "botte", "name": "persil", "category": "fruits-legumes", "scalable": false },
+      { "qty": 1, "unit": "botte", "name": "menthe", "category": "fruits-legumes", "scalable": false },
+      { "qty": 1, "unit": "botte", "name": "ciboulette", "category": "fruits-legumes", "scalable": false },
+      { "qty": 1, "unit": null, "name": "salade verte", "category": "fruits-legumes", "scalable": false },
+      { "qty": null, "unit": null, "name": "pain complet", "category": "pains-pates", "scalable": false },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false },
+      { "qty": null, "unit": null, "name": "sel, poivre", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Râper les courgettes, presser pour évacuer l'eau. Émincer l'oignon.",
+      "Faire revenir oignon puis courgettes à la poêle, 5-6 min.",
+      "Battre les œufs avec les herbes ciselées, sel, poivre.",
+      "Verser sur les légumes, couvrir, cuire 6-8 min à feu doux.",
+      "Servir avec salade vinaigrette et pain complet."
+    ]
+  },
+  {
+    "id": "saumon-papillote",
+    "title": "Saumon en papillote, citron, aneth & courgettes",
+    "slot": "dinner",
+    "timeMin": 20,
+    "description": "Le poisson cuit dans son jus, parfumé d'aneth et de citron. Zéro vaisselle, légumes inclus.",
+    "tags": ["poisson", "au-four", "omega-3"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 4, "unit": "pavé", "name": "saumon", "category": "viandes-poissons", "scalable": true },
+      { "qty": 2, "unit": null, "name": "courgettes", "category": "fruits-legumes", "scalable": true },
+      { "qty": 2, "unit": null, "name": "citrons", "category": "fruits-legumes", "scalable": true },
+      { "qty": 1, "unit": "botte", "name": "aneth (ou ciboulette)", "category": "fruits-legumes", "scalable": false },
+      { "qty": 250, "unit": "g", "name": "boulgour", "category": "epicerie", "scalable": true },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false },
+      { "qty": null, "unit": null, "name": "sel, poivre", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Préchauffer le four à 200 °C. Lancer le boulgour (10 min cuisson).",
+      "Tailler les courgettes en fines rondelles, disposer sur 4 carrés de papier cuisson.",
+      "Poser un pavé de saumon, rondelles de citron, aneth, filet d'huile, sel, poivre.",
+      "Fermer les papillotes, cuire 12-14 min.",
+      "Servir sur lit de boulgour, arroser du jus de cuisson."
+    ]
+  },
+  {
+    "id": "souvlaki-poulet",
+    "title": "Souvlaki de poulet, patate douce & tzatziki coco",
+    "slot": "dinner",
+    "timeMin": 25,
+    "description": "Brochettes grecques aux épices, frites de patate douce au four, et un tzatziki réinventé au yaourt de coco — sans lactose.",
+    "tags": ["grec", "convivial", "au-four"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 600, "unit": "g", "name": "blancs de poulet", "category": "viandes-poissons", "scalable": true },
+      { "qty": 4, "unit": null, "name": "patates douces", "category": "fruits-legumes", "scalable": true },
+      { "qty": 400, "unit": "g", "name": "yaourt coco nature", "category": "frais", "scalable": true },
+      { "qty": 1, "unit": null, "name": "concombre", "category": "fruits-legumes", "scalable": true },
+      { "qty": 2, "unit": "gousse", "name": "ail", "category": "fruits-legumes", "scalable": true },
+      { "qty": 1, "unit": "cs", "name": "origan séché", "category": "epices", "scalable": false },
+      { "qty": null, "unit": null, "name": "paprika", "category": "epices", "scalable": false },
+      { "qty": 1, "unit": "botte", "name": "menthe", "category": "fruits-legumes", "scalable": false },
+      { "qty": 1, "unit": null, "name": "citron", "category": "fruits-legumes", "scalable": false },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Four à 220 °C. Couper les patates douces en frites, huile d'olive, paprika, sel. Enfourner 25 min.",
+      "Couper le poulet en cubes, mariner (huile, origan, ail, citron, sel).",
+      "Râper le concombre, presser. Mélanger au yaourt coco avec ail, menthe, citron.",
+      "Enfiler le poulet sur brochettes, enfourner 12 min en milieu de cuisson des frites.",
+      "Servir le tout ensemble."
+    ]
+  },
+  {
+    "id": "tajine-poulet",
+    "title": "Tajine de poulet aux citrons confits & olives",
+    "slot": "dinner",
+    "timeMin": 75,
+    "description": "Le seul plat long de la semaine, gardé pour le dimanche. Poulet confit dans une sauce safranée, citrons confits, olives violettes.",
+    "tags": ["marocain", "plat-unique", "convivial"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 8, "unit": null, "name": "cuisses de poulet", "category": "viandes-poissons", "scalable": true },
+      { "qty": 2, "unit": null, "name": "oignons", "category": "fruits-legumes", "scalable": true },
+      { "qty": 4, "unit": "gousse", "name": "ail", "category": "fruits-legumes", "scalable": true },
+      { "qty": 2, "unit": null, "name": "citrons confits", "category": "epicerie", "scalable": true },
+      { "qty": 200, "unit": "g", "name": "olives violettes", "category": "epicerie", "scalable": true },
+      { "qty": null, "unit": null, "name": "safran (ou curcuma)", "category": "epices", "scalable": false },
+      { "qty": 1, "unit": "cc", "name": "gingembre", "category": "epices", "scalable": false },
+      { "qty": 1, "unit": "botte", "name": "coriandre", "category": "fruits-legumes", "scalable": false },
+      { "qty": 300, "unit": "g", "name": "semoule moyenne", "category": "epicerie", "scalable": true },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Saisir les cuisses de poulet dans une cocotte, réserver.",
+      "Faire revenir oignons émincés et ail, ajouter safran, gingembre, sel.",
+      "Remettre le poulet, couvrir d'eau à mi-hauteur, mijoter 45 min à feu doux.",
+      "Ajouter citrons confits coupés et olives, mijoter 15 min de plus.",
+      "Pendant ce temps, hydrater la semoule (volume égal d'eau bouillante salée, 5 min).",
+      "Parsemer de coriandre, servir sur la semoule."
+    ]
+  },
+  {
+    "id": "minestrone",
+    "title": "Minestrone aux haricots blancs & légumes",
+    "slot": "dinner",
+    "timeMin": 25,
+    "description": "La soupe-plat italienne. Pour clore la semaine en douceur. Pain grillé frotté à l'ail.",
+    "tags": ["italien", "vegetarien", "reconfortant"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 400, "unit": "g", "name": "haricots blancs (boîte)", "category": "epicerie", "scalable": true },
+      { "qty": 1, "unit": "boite", "name": "tomates concassées", "category": "epicerie", "scalable": true },
+      { "qty": 2, "unit": null, "name": "carottes", "category": "fruits-legumes", "scalable": true },
+      { "qty": 2, "unit": null, "name": "branches de céleri", "category": "fruits-legumes", "scalable": true },
+      { "qty": 1, "unit": null, "name": "oignon", "category": "fruits-legumes", "scalable": true },
+      { "qty": 2, "unit": "gousse", "name": "ail", "category": "fruits-legumes", "scalable": true },
+      { "qty": 1, "unit": null, "name": "courgette", "category": "fruits-legumes", "scalable": true },
+      { "qty": 100, "unit": "g", "name": "petites pâtes (orzo)", "category": "epicerie", "scalable": true },
+      { "qty": 1, "unit": "botte", "name": "basilic", "category": "fruits-legumes", "scalable": false },
+      { "qty": null, "unit": null, "name": "pain complet", "category": "pains-pates", "scalable": false },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Couper tous les légumes en petits dés.",
+      "Faire revenir oignon, ail, carottes, céleri 5 min à l'huile d'olive.",
+      "Ajouter tomates, 1,2 L d'eau ou bouillon, courgette, haricots. Saler.",
+      "Cuire 15 min, ajouter les pâtes 8 min avant la fin.",
+      "Servir avec basilic, filet d'huile, et pain grillé."
+    ]
+  },
+  {
+    "id": "salade-pois-chiches",
+    "title": "Salade pois chiches, concombre, tomates cerises & feta de brebis",
+    "slot": "lunch",
+    "timeMin": 10,
+    "description": "Une salade méditerranéenne fraîche, montée en un clin d'œil. Feta de brebis pour le côté lacté toléré.",
+    "tags": ["mediterraneen", "rapide", "vegetarien"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 2, "unit": "boite", "name": "pois chiches égouttés", "category": "epicerie", "scalable": true },
+      { "qty": 1, "unit": null, "name": "concombre", "category": "fruits-legumes", "scalable": true },
+      { "qty": 250, "unit": "g", "name": "tomates cerises", "category": "fruits-legumes", "scalable": true },
+      { "qty": 100, "unit": "g", "name": "olives noires", "category": "epicerie", "scalable": true },
+      { "qty": 1, "unit": null, "name": "oignon rouge", "category": "fruits-legumes", "scalable": true },
+      { "qty": 1, "unit": "botte", "name": "persil", "category": "fruits-legumes", "scalable": false },
+      { "qty": 1, "unit": null, "name": "citron", "category": "fruits-legumes", "scalable": false },
+      { "qty": 150, "unit": "g", "name": "feta de brebis", "category": "frais", "scalable": true },
+      { "qty": 4, "unit": null, "name": "pains pita", "category": "pains-pates", "scalable": true },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Égoutter et rincer les pois chiches.",
+      "Tailler concombre, tomates cerises, oignon rouge en dés.",
+      "Mélanger avec olives, persil ciselé, jus de citron et huile d'olive.",
+      "Émietter la feta de brebis sur le dessus.",
+      "Servir avec les pains pita."
+    ]
+  },
+  {
+    "id": "wrap-thon",
+    "title": "Wrap thon, tomate, houmous & olives",
+    "slot": "lunch",
+    "timeMin": 10,
+    "description": "Le déjeuner le plus rapide de la semaine. Houmous généreux, thon à l'huile, et c'est plié.",
+    "tags": ["rapide", "transportable"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 4, "unit": null, "name": "wraps", "category": "pains-pates", "scalable": true },
+      { "qty": 2, "unit": "boite", "name": "thon à l'huile d'olive", "category": "epicerie", "scalable": true },
+      { "qty": 200, "unit": "g", "name": "houmous", "category": "epicerie", "scalable": true },
+      { "qty": 2, "unit": null, "name": "tomates", "category": "fruits-legumes", "scalable": true },
+      { "qty": 1, "unit": null, "name": "salade verte", "category": "fruits-legumes", "scalable": false },
+      { "qty": 80, "unit": "g", "name": "olives", "category": "epicerie", "scalable": true }
+    ],
+    "steps": [
+      "Étaler une couche généreuse de houmous sur chaque wrap.",
+      "Répartir le thon égoutté, tomates en rondelles, salade et olives.",
+      "Rouler serré.",
+      "Trancher en deux et servir."
+    ]
+  },
+  {
+    "id": "bowl-quinoa-lentilles",
+    "title": "Bowl quinoa-lentilles, poivrons grillés & tahini-citron",
+    "slot": "lunch",
+    "timeMin": 10,
+    "description": "Bowl complet protéiné, parfait pour la veille. Vinaigrette tahini-citron qui change tout.",
+    "tags": ["vegetarien", "batch-cooking", "complet"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 200, "unit": "g", "name": "quinoa", "category": "epicerie", "scalable": true },
+      { "qty": 1, "unit": "boite", "name": "lentilles", "category": "epicerie", "scalable": true },
+      { "qty": 2, "unit": null, "name": "poivrons grillés (bocal)", "category": "epicerie", "scalable": true },
+      { "qty": 100, "unit": "g", "name": "roquette", "category": "fruits-legumes", "scalable": true },
+      { "qty": 3, "unit": "cs", "name": "tahini", "category": "epicerie", "scalable": false },
+      { "qty": 1, "unit": null, "name": "citron", "category": "fruits-legumes", "scalable": false },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false },
+      { "qty": null, "unit": null, "name": "sel, poivre", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Cuire le quinoa 12 min dans l'eau salée, égoutter.",
+      "Mélanger quinoa tiède et lentilles égouttées.",
+      "Ajouter poivrons grillés émincés et roquette.",
+      "Préparer la vinaigrette tahini-citron, eau, huile d'olive, sel, poivre.",
+      "Verser sur les bowls et servir."
+    ]
+  },
+  {
+    "id": "salade-nicoise",
+    "title": "Salade niçoise (thon, œuf, haricots verts, olives)",
+    "slot": "lunch",
+    "timeMin": 10,
+    "description": "La niçoise classique, sans pomme de terre. Œufs durs, haricots verts cuits la veille, le tout assemblé en quelques minutes.",
+    "tags": ["mediterraneen", "complet", "rapide"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 4, "unit": "oeuf", "name": "œufs durs", "category": "frais", "scalable": true },
+      { "qty": 2, "unit": "boite", "name": "thon", "category": "epicerie", "scalable": true },
+      { "qty": 300, "unit": "g", "name": "haricots verts cuits", "category": "fruits-legumes", "scalable": true },
+      { "qty": 4, "unit": null, "name": "tomates", "category": "fruits-legumes", "scalable": true },
+      { "qty": 100, "unit": "g", "name": "olives noires", "category": "epicerie", "scalable": true },
+      { "qty": 8, "unit": null, "name": "anchois", "category": "epicerie", "scalable": true },
+      { "qty": 1, "unit": null, "name": "salade verte", "category": "fruits-legumes", "scalable": false },
+      { "qty": 1, "unit": null, "name": "citron", "category": "fruits-legumes", "scalable": false },
+      { "qty": 1, "unit": "cc", "name": "moutarde", "category": "epicerie", "scalable": false },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Cuire les œufs durs (10 min), refroidir, écaler.",
+      "Disposer sur les assiettes salade, haricots verts, tomates en quartiers.",
+      "Ajouter le thon, les œufs coupés, olives et anchois.",
+      "Préparer la vinaigrette olive-citron-moutarde.",
+      "Arroser et servir aussitôt."
+    ]
+  },
+  {
+    "id": "pita-falafels",
+    "title": "Pita falafels, houmous & crudités",
+    "slot": "lunch",
+    "timeMin": 10,
+    "description": "Falafels du rayon frais, pitas garnis de houmous, crudités croquantes et sauce tahini.",
+    "tags": ["libanais", "vegetarien", "rapide"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 12, "unit": null, "name": "falafels (rayon frais)", "category": "pains-pates", "scalable": true },
+      { "qty": 4, "unit": null, "name": "pitas", "category": "pains-pates", "scalable": true },
+      { "qty": 200, "unit": "g", "name": "houmous", "category": "epicerie", "scalable": true },
+      { "qty": 1, "unit": null, "name": "concombre", "category": "fruits-legumes", "scalable": true },
+      { "qty": 2, "unit": null, "name": "tomates", "category": "fruits-legumes", "scalable": true },
+      { "qty": 1, "unit": null, "name": "salade verte", "category": "fruits-legumes", "scalable": false },
+      { "qty": 2, "unit": "cs", "name": "tahini", "category": "epicerie", "scalable": false },
+      { "qty": 1, "unit": null, "name": "citron", "category": "fruits-legumes", "scalable": false }
+    ],
+    "steps": [
+      "Réchauffer les falafels selon le paquet (4-5 min).",
+      "Tiédir les pitas et les ouvrir en deux.",
+      "Tartiner de houmous, garnir de crudités et falafels.",
+      "Arroser de sauce tahini-citron.",
+      "Servir aussitôt."
+    ]
+  },
+  {
+    "id": "pizza-fine",
+    "title": "Pizza fine légumes grillés & jambon cru (sans fromage)",
+    "slot": "lunch",
+    "timeMin": 10,
+    "description": "Pizza fine sans fromage, garnie de légumes grillés, jambon cru et basilic. Au four en 15 min.",
+    "tags": ["italien", "au-four", "convivial"],
+    "constraints": ["sans-lactose"],
+    "basePeople": 4,
+    "ingredients": [
+      { "qty": 2, "unit": null, "name": "pâtes à pizza fines", "category": "pains-pates", "scalable": true },
+      { "qty": 200, "unit": "g", "name": "sauce tomate", "category": "epicerie", "scalable": true },
+      { "qty": 2, "unit": null, "name": "poivrons grillés (bocal)", "category": "epicerie", "scalable": true },
+      { "qty": 1, "unit": null, "name": "courgette", "category": "fruits-legumes", "scalable": true },
+      { "qty": 8, "unit": "tranche", "name": "jambon cru", "category": "viandes-poissons", "scalable": true },
+      { "qty": 1, "unit": "botte", "name": "basilic", "category": "fruits-legumes", "scalable": false },
+      { "qty": null, "unit": null, "name": "huile d'olive", "category": "epices", "scalable": false }
+    ],
+    "steps": [
+      "Préchauffer le four à 240 °C.",
+      "Étaler la sauce tomate sur les pâtes.",
+      "Répartir les poivrons grillés et la courgette en fines lamelles.",
+      "Enfourner 12-15 min.",
+      "À la sortie du four, ajouter le jambon cru, le basilic et un filet d'huile d'olive."
+    ]
+  }
+]

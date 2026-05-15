@@ -1,0 +1,9 @@
+{
+  "tomate": ["juin", "juillet", "aout", "septembre"],
+  "tomates cerises": ["juin", "juillet", "aout", "septembre"],
+  "courgette": ["mai", "juin", "juillet", "aout", "septembre"],
+  "concombre": ["mai", "juin", "juillet", "aout", "septembre"],
+  "haricots verts": ["juin", "juillet", "aout", "septembre"],
+  "poivron": ["juillet", "aout", "septembre", "octobre"],
+  "patate douce": ["octobre", "novembre", "decembre", "janvier", "fevrier"]
+}
