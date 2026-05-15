@@ -4,6 +4,7 @@ import { scaleIngredient } from '../scaling.js';
 import { formatQty } from '../utils.js';
 import { effectiveIngredients } from '../shopping.js';
 import { isInSeason } from '../seasonality.js';
+import { startTimer } from '../ui/timer.js';
 
 export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked, note, callbacks, meal, seasonality }) {
   const root = document.getElementById('modal-root');
@@ -43,7 +44,7 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked,
         </ul>
         <h3 class="section-h">Étapes</h3>
         <ol class="steps-list">
-          ${recipe.steps.map(s => `<li>${escapeHtml(s)}</li>`).join('')}
+          ${recipe.steps.map(s => `<li>${linkifyTimers(escapeHtml(s))}</li>`).join('')}
         </ol>
         <div class="cooked-row">
           <button class="btn-secondary cooked-toggle" aria-pressed="${isCooked}">
@@ -89,7 +90,23 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked,
     });
   });
 
+  // Timer triggers
+  const recipeLabel = recipe.title.length > 24 ? recipe.title.slice(0, 24) + '…' : recipe.title;
+  sheet.querySelectorAll('.timer-trigger').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const min = parseInt(btn.dataset.min, 10);
+      if (min > 0) startTimer(recipeLabel, min);
+    });
+  });
+
   function close() { root.innerHTML = ''; }
+}
+
+function linkifyTimers(html) {
+  return html.replace(/\b(\d+)\s*(min|minutes)\b/g, (m, n) => {
+    return `<button class="timer-trigger" data-min="${n}" data-label="">⏱ ${n}min</button>`;
+  });
 }
 
 function escapeHtml(s) {
