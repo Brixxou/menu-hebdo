@@ -48,10 +48,25 @@ export function openWizard({ data, currentDefaults, callbacks }) {
   }
 
   function renderStep1(body) {
+    const month = new Date().toLocaleString('fr-FR', { month: 'long' }).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const seasonGroups = {
+      printemps: ['mars', 'avril', 'mai'],
+      ete: ['juin', 'juillet', 'aout'],
+      automne: ['septembre', 'octobre', 'novembre'],
+      hiver: ['decembre', 'janvier', 'fevrier']
+    };
+    const seasonOf = m => {
+      if (!m.seasons || m.seasons.length === 0) return 1;
+      for (const season of m.seasons) {
+        if (seasonGroups[season]?.includes(month)) return 0;
+      }
+      return 1;
+    };
+    const sortedMenus = [...data.menus].sort((a, b) => seasonOf(a) - seasonOf(b));
     body.innerHTML = `
       <h2 class="wizard-title">Choisis ton menu</h2>
       <div class="menu-grid">
-        ${data.menus.map(m => `
+        ${sortedMenus.map(m => `
           <button class="menu-card ${selectedMenuId === m.id ? 'selected' : ''}" data-menu="${m.id}">
             <h3>${escapeHtml(m.name)}</h3>
             <p>${escapeHtml(m.theme)}</p>
@@ -157,6 +172,14 @@ export function openWizard({ data, currentDefaults, callbacks }) {
   function close() { root.innerHTML = ''; }
 
   root.appendChild(overlay);
+
+  let touchStartX = 0;
+  overlay.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+  overlay.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (dx > 80 && step > 1) { step--; render(); }
+  });
+
   render();
 }
 
