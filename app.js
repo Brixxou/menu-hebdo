@@ -11,6 +11,7 @@ import { enterShoppingMode, exitShoppingMode } from './js/ui/shopping-mode.js';
 import { shareShoppingList } from './js/ui/share.js';
 import { buildShoppingList } from './js/shopping.js';
 import { openHistory } from './js/views/history.js';
+import { openSettings } from './js/views/settings.js';
 
 const state = createState();
 
@@ -114,6 +115,14 @@ function openRecipeStandalone(recipeId) {
 
 function rerender() {
   const s = state.load();
+  document.documentElement.dataset.theme = s.preferences.theme;
+  if (s.preferences.theme === 'terracotta' && !document.querySelector('link[data-terracotta]')) {
+    const l = document.createElement('link');
+    l.rel = 'stylesheet';
+    l.setAttribute('data-terracotta', '');
+    l.href = 'https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;700&family=DM+Mono:wght@400&display=swap';
+    document.head.appendChild(l);
+  }
   const callbacks = {
     onStartWeek: () => {
       const cur = state.load();
@@ -261,3 +270,15 @@ function rerender() {
 }
 
 document.addEventListener('DOMContentLoaded', main);
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('btn-settings').addEventListener('click', () => {
+    openSettings({
+      state: state.load(),
+      onChange: (patch) => {
+        state.mutate(d => { Object.assign(d.preferences, patch); });
+        rerender();
+      }
+    });
+  });
+});

@@ -41,10 +41,16 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .app-header h1 {
   font-size: 22px;
   font-weight: 700;
+}
+#btn-settings {
+  font-size: 22px;
 }
 .view {
   display: none;
@@ -577,3 +583,22 @@ body.shopping-mode .shopping-exit {
 .history-list li { padding: 12px 0; border-bottom: 1px solid var(--separator); cursor: pointer; }
 .hist-date { color: var(--text-muted); font-size: 13px; }
 .hist-menu { font-size: 16px; }
+
+.row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--separator); }
+.row select, .row input { font: inherit; padding: 6px 10px; border: 1px solid var(--separator); border-radius: 6px; background: var(--surface); }
+
+[data-theme="terracotta"] {
+  --bg: #f4ede0;
+  --surface: #faf5ea;
+  --text: #2a1f15;
+  --text-secondary: #5c4a37;
+  --text-muted: #5c4a37;
+  --separator: #d4c4a8;
+  --accent: #c2562a;
+  --font-system: 'Fraunces', 'Times New Roman', serif;
+}
+[data-theme="terracotta"] .meal-label,
+[data-theme="terracotta"] .section-h {
+  font-family: 'DM Mono', 'Menlo', monospace;
+  letter-spacing: 0.1em;
+}
