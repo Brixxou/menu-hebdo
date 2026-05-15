@@ -191,5 +191,53 @@
         "dinner": "lasagnes-courgettes"
       }
     ]
+  },
+  {
+    "id": "vegetarien",
+    "name": "Végétarien complet",
+    "theme": "Légumineuses, légumes, céréales",
+    "defaultConstraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "seasons": [],
+    "cover": "https://source.unsplash.com/featured/600x400/?vegetarian,bowl",
+    "days": [
+      {
+        "day": "Lundi",
+        "lunch": "salade-pois-chiches",
+        "dinner": "dahl-coco"
+      },
+      {
+        "day": "Mardi",
+        "lunch": "bowl-quinoa-lentilles",
+        "dinner": "pates-pesto-rouge"
+      },
+      {
+        "day": "Mercredi",
+        "lunch": "buddha-bowl-tahini",
+        "dinner": "velou-courge-coco"
+      },
+      {
+        "day": "Jeudi",
+        "lunch": "pita-falafels",
+        "dinner": "couscous-vege"
+      },
+      {
+        "day": "Vendredi",
+        "lunch": "bowl-quinoa-lentilles",
+        "dinner": "galette-lentilles"
+      },
+      {
+        "day": "Samedi",
+        "lunch": "salade-pois-chiches",
+        "dinner": "falafels-maison"
+      },
+      {
+        "day": "Dimanche",
+        "lunch": "pita-falafels",
+        "dinner": "minestrone"
+      }
+    ]
   }
 ]

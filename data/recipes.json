@@ -3509,5 +3509,669 @@
       "Préparer la sauce: tahini, jus de citron, 4 cs d'eau, sel.",
       "Mélanger quinoa, légumes rôtis, persil. Arroser de sauce au service."
     ]
+  },
+  {
+    "id": "buddha-bowl-tahini",
+    "title": "Buddha bowl kale, pois chiches rôtis, tahini",
+    "slot": "both",
+    "timeMin": 30,
+    "description": "Bowl complet végétal avec quinoa, kale massé, pois chiches croustillants et sauce tahini-citron.",
+    "tags": [
+      "vegetarien",
+      "legumineuses",
+      "au-four"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "quinoa",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "pois chiches",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "chou kale",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "carottes",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "cs",
+        "name": "tahini",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "citron",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "paprika fumé",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 200°C. Égoutter et sécher les pois chiches.",
+      "Mélanger pois chiches avec huile, paprika, sel. Rôtir 20 min.",
+      "Cuire le quinoa 12 min. Râper les carottes.",
+      "Masser le kale émincé avec un peu d'huile et sel 2 min.",
+      "Sauce: tahini, jus de citron, 4 cs d'eau, sel. Composer les bowls."
+    ]
+  },
+  {
+    "id": "dahl-coco",
+    "title": "Dahl de lentilles corail au lait de coco",
+    "slot": "dinner",
+    "timeMin": 30,
+    "description": "Dahl indien crémeux, doux et épicé. Réconfortant à souhait.",
+    "tags": [
+      "indien",
+      "vegetarien",
+      "legumineuses",
+      "mijote"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 250,
+        "unit": "g",
+        "name": "lentilles corail",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 400,
+        "unit": "ml",
+        "name": "lait de coco",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "tomates concassées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "cm",
+        "name": "gingembre frais",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "curcuma moulu",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "cumin moulu",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "coriandre",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Émincer oignon, ail, gingembre. Faire suer dans huile 5 min.",
+      "Ajouter curcuma, cumin, remuer 1 min.",
+      "Ajouter lentilles rincées, tomates, lait de coco, 400 ml d'eau.",
+      "Mijoter 20 min jusqu'à ce que les lentilles fondent. Saler.",
+      "Garnir de coriandre, servir avec riz basmati ou naan."
+    ]
+  },
+  {
+    "id": "falafels-maison",
+    "title": "Falafels maison croustillants",
+    "slot": "dinner",
+    "timeMin": 35,
+    "description": "Falafels dorés aux pois chiches et herbes fraîches, sauce tahini.",
+    "tags": [
+      "oriental",
+      "vegetarien",
+      "legumineuses"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 2,
+        "unit": "boite",
+        "name": "pois chiches",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "persil",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "coriandre",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "cumin moulu",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "farine de pois chiches",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "cs",
+        "name": "tahini",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "citron",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Mixer pois chiches égouttés, herbes, oignon, ail, cumin, sel.",
+      "Ajouter la farine de pois chiches. Former 16 boulettes.",
+      "Faire chauffer 2 cm d'huile à la poêle, frire les falafels 5 min de chaque côté.",
+      "Préparer la sauce: tahini, jus de citron, 4 cs d'eau, sel.",
+      "Servir avec crudités, pita et sauce tahini."
+    ]
+  },
+  {
+    "id": "velou-courge-coco",
+    "title": "Velouté de butternut au lait de coco",
+    "slot": "dinner",
+    "timeMin": 35,
+    "description": "Velouté onctueux et doux, parfumé au gingembre. Pur réconfort d'automne.",
+    "tags": [
+      "vegetarien",
+      "soupe",
+      "mijote"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "courge butternut",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 400,
+        "unit": "ml",
+        "name": "lait de coco",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "cm",
+        "name": "gingembre frais",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "curcuma moulu",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 30,
+        "unit": "g",
+        "name": "graines de courge",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "seasons": [
+      "automne",
+      "hiver"
+    ],
+    "steps": [
+      "Peler et couper la courge en cubes. Émincer oignon et gingembre.",
+      "Faire suer oignon, gingembre dans huile 5 min. Ajouter curcuma.",
+      "Ajouter la courge, couvrir d'eau, cuire 20 min.",
+      "Mixer avec le lait de coco. Saler, poivrer.",
+      "Servir avec graines de courge grillées et filet d'huile."
+    ]
+  },
+  {
+    "id": "pates-pesto-rouge",
+    "title": "Pâtes au pesto rouge et roquette",
+    "slot": "dinner",
+    "timeMin": 20,
+    "description": "Pâtes au pesto de tomates séchées maison, pignons grillés et roquette.",
+    "tags": [
+      "italien",
+      "vegetarien",
+      "rapide"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 400,
+        "unit": "g",
+        "name": "pâtes courtes",
+        "category": "pains-pates",
+        "scalable": true
+      },
+      {
+        "qty": 150,
+        "unit": "g",
+        "name": "tomates séchées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 50,
+        "unit": "g",
+        "name": "pignons de pin",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 100,
+        "unit": "g",
+        "name": "roquette",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "basilic",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Cuire les pâtes 10 min en eau bouillante salée.",
+      "Pendant ce temps, dorer les pignons 3 min à sec.",
+      "Mixer tomates séchées, ail, basilic, moitié des pignons, 6 cs d'huile.",
+      "Égoutter les pâtes, garder 1 louche d'eau. Mélanger avec le pesto et 2 cs d'eau.",
+      "Garnir de roquette, pignons restants. Servir aussitôt."
+    ]
+  },
+  {
+    "id": "galette-lentilles",
+    "title": "Galettes de lentilles vertes aux herbes",
+    "slot": "dinner",
+    "timeMin": 35,
+    "description": "Galettes végétales fondantes à cœur, croustillantes en surface.",
+    "tags": [
+      "vegetarien",
+      "legumineuses",
+      "une-poele"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 250,
+        "unit": "g",
+        "name": "lentilles vertes",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "oeuf",
+        "name": "œufs",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 80,
+        "unit": "g",
+        "name": "chapelure",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "persil",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "cumin moulu",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Cuire lentilles 25 min en eau salée. Égoutter, écraser grossièrement.",
+      "Mélanger avec oignon haché, ail pressé, œufs, chapelure, persil, cumin, sel.",
+      "Former 8 galettes.",
+      "Cuire à la poêle dans huile 4 min de chaque côté.",
+      "Servir avec salade verte et yaourt végétal."
+    ]
+  },
+  {
+    "id": "couscous-vege",
+    "title": "Couscous aux 7 légumes",
+    "slot": "dinner",
+    "timeMin": 50,
+    "description": "Couscous généreux aux légumes mijotés et pois chiches, sans viande.",
+    "tags": [
+      "marocain",
+      "vegetarien",
+      "mijote",
+      "convivial"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 300,
+        "unit": "g",
+        "name": "semoule moyenne",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "pois chiches",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "carottes",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "navets",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "courgettes",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 300,
+        "unit": "g",
+        "name": "courge butternut",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "oignons",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 50,
+        "unit": "g",
+        "name": "raisins secs",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "ras-el-hanout",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "tomates concassées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Faire revenir oignons en cubes dans huile 5 min. Ajouter ras-el-hanout.",
+      "Ajouter carottes, navets, tomates, 1 L d'eau. Mijoter 20 min.",
+      "Ajouter courgettes, courge, pois chiches, raisins. Cuire 15 min de plus. Saler.",
+      "Préparer la semoule selon paquet (gonfler dans eau bouillante, défaire à la fourchette).",
+      "Servir semoule avec légumes et bouillon."
+    ]
   }
 ]
