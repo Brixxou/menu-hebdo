@@ -3,8 +3,9 @@
 import { scaleIngredient } from '../scaling.js';
 import { formatQty } from '../utils.js';
 import { effectiveIngredients } from '../shopping.js';
+import { isInSeason } from '../seasonality.js';
 
-export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked, note, callbacks, meal }) {
+export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked, note, callbacks, meal, seasonality }) {
   const root = document.getElementById('modal-root');
   root.innerHTML = '';
   const sheet = document.createElement('div');
@@ -33,9 +34,10 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked,
           ${ingredients.map(ing => {
             const scaled = scaleIngredient(ing, recipe.basePeople, peopleEffective);
             const hasSubs = (ing.substitutes ?? []).length > 0;
+            const inSeason = isInSeason(scaled.name, seasonality);
             return `<li class="ing ${hasSubs ? 'has-subs' : ''}" data-name="${escapeAttr(ing.name)}">
               <span class="ing-qty">${formatQty(scaled)}</span>
-              <span class="ing-name">${escapeHtml(scaled.name)}${hasSubs ? ' <span class="subs-hint">↻</span>' : ''}</span>
+              <span class="ing-name">${escapeHtml(scaled.name)}${inSeason ? ' 🌱' : ''}${hasSubs ? ' <span class="subs-hint">↻</span>' : ''}</span>
             </li>`;
           }).join('')}
         </ul>

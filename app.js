@@ -28,6 +28,7 @@ function openRecipeFor(day, slot, recipeId) {
   openRecipeModal({
     recipe,
     meal,
+    seasonality: _dataCache.seasonality,
     peopleEffective,
     isFavorite: cur.preferences.favorites.includes(recipeId),
     isCooked: !!meal.cooked,
@@ -83,6 +84,7 @@ function openRecipeStandalone(recipeId) {
   const recipe = _dataCache.recipesById[recipeId];
   openRecipeModal({
     recipe,
+    seasonality: _dataCache.seasonality,
     peopleEffective: s.preferences.defaultPeople,
     isFavorite: s.preferences.favorites.includes(recipeId),
     isCooked: false,
