@@ -50,5 +50,16 @@ export function createState(storage = globalThis.localStorage) {
     return state;
   }
 
-  return { load, save, mutate };
+  function archiveAndStart(newWeek) {
+    mutate(d => {
+      if (d.activeWeek) {
+        d.history.push(d.activeWeek);
+        while (d.history.length > 10) d.history.shift();
+      }
+      d.activeWeek = newWeek;
+      d.shoppingList.checked = {};
+    });
+  }
+
+  return { load, save, mutate, archiveAndStart };
 }
