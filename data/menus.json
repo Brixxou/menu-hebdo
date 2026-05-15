@@ -3,7 +3,7 @@
     "id": "mediterraneen",
     "name": "Méditerranéen",
     "theme": "Sud, soleil, huile d'olive",
-    "cover": "https://source.unsplash.com/featured/600x400/?mediterranean,food",
+    "cover": "https://images.unsplash.com/photo-1653611540493-b3a896319fbf?w=800&h=500&fit=crop&auto=format&q=70",
     "defaultConstraints": [
       "sans-lactose"
     ],
@@ -53,7 +53,7 @@
     "id": "asiatique-express",
     "name": "Asiatique express",
     "theme": "Wok, herbes fraîches, citron vert",
-    "cover": "https://source.unsplash.com/featured/600x400/?asian,noodles",
+    "cover": "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=800&h=500&fit=crop&auto=format&q=70",
     "defaultConstraints": [
       "sans-lactose"
     ],
@@ -100,7 +100,7 @@
     "id": "hiver-reconfort",
     "name": "Hiver réconfort",
     "theme": "Soupes, mijotés, plats au four",
-    "cover": "https://source.unsplash.com/featured/600x400/?winter,stew,soup",
+    "cover": "https://images.unsplash.com/photo-1664741662725-bd131742b7b7?w=800&h=500&fit=crop&auto=format&q=70",
     "defaultConstraints": [
       "sans-lactose"
     ],
@@ -153,7 +153,7 @@
       "sans-lactose"
     ],
     "seasons": [],
-    "cover": "https://source.unsplash.com/featured/600x400/?meal-prep,food",
+    "cover": "https://images.unsplash.com/photo-1543352632-5a4b24e4d2a6?w=800&h=500&fit=crop&auto=format&q=70",
     "days": [
       {
         "day": "Lundi",
@@ -201,7 +201,7 @@
       "vegetarien"
     ],
     "seasons": [],
-    "cover": "https://source.unsplash.com/featured/600x400/?vegetarian,bowl",
+    "cover": "https://images.unsplash.com/photo-1505576633757-0ac1084af824?w=800&h=500&fit=crop&auto=format&q=70",
     "days": [
       {
         "day": "Lundi",
@@ -248,7 +248,7 @@
       "sans-lactose"
     ],
     "seasons": [],
-    "cover": "https://source.unsplash.com/featured/600x400/?quick,dinner",
+    "cover": "https://images.unsplash.com/photo-1556761223-4c4282c73f77?w=800&h=500&fit=crop&auto=format&q=70",
     "days": [
       {
         "day": "Lundi",
@@ -295,7 +295,7 @@
       "sans-lactose"
     ],
     "seasons": [],
-    "cover": "https://source.unsplash.com/featured/600x400/?family,dinner",
+    "cover": "https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=800&h=500&fit=crop&auto=format&q=70",
     "days": [
       {
         "day": "Lundi",
@@ -342,7 +342,7 @@
       "sans-lactose"
     ],
     "seasons": [],
-    "cover": "https://source.unsplash.com/featured/600x400/?asian,fusion,food",
+    "cover": "https://images.unsplash.com/photo-1602273660127-a0000560a4c1?w=800&h=500&fit=crop&auto=format&q=70",
     "days": [
       {
         "day": "Lundi",
