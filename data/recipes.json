@@ -4689,5 +4689,812 @@
       "Égoutter pâtes, mélanger avec anchois, zeste et jus de citron, piment.",
       "Garnir de chapelure et persil. Servir aussitôt."
     ]
+  },
+  {
+    "id": "tomato-mozza-pates",
+    "title": "Pâtes tomate & \"mozza\" coco",
+    "slot": "dinner",
+    "timeMin": 20,
+    "description": "Pâtes sauce tomate aux dés de mozza végétale à base de coco. Préférée des petits.",
+    "tags": [
+      "italien",
+      "enfants",
+      "rapide"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 400,
+        "unit": "g",
+        "name": "pâtes courtes",
+        "category": "pains-pates",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "tomates concassées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "mozzarella végétale (coco)",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "basilic",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "origan séché",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Cuire les pâtes 10 min en eau salée.",
+      "Faire revenir ail haché dans huile 1 min.",
+      "Ajouter tomates, origan, sel. Mijoter 8 min.",
+      "Couper la mozza végétale en dés.",
+      "Mélanger pâtes, sauce, mozza, basilic. Servir aussitôt."
+    ]
+  },
+  {
+    "id": "nuggets-poulet-maison",
+    "title": "Nuggets de poulet panés maison",
+    "slot": "dinner",
+    "timeMin": 25,
+    "description": "Nuggets dorés maison, panure croustillante, viande tendre.",
+    "tags": [
+      "enfants",
+      "viande",
+      "au-four"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 600,
+        "unit": "g",
+        "name": "filets de poulet",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "oeuf",
+        "name": "œufs",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 150,
+        "unit": "g",
+        "name": "chapelure",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 50,
+        "unit": "g",
+        "name": "farine",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "paprika doux",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 200°C. Couper le poulet en morceaux.",
+      "Préparer 3 bols: farine + sel + paprika, œufs battus, chapelure.",
+      "Tremper chaque morceau: farine, œuf, chapelure.",
+      "Déposer sur plaque huilée, arroser d'huile.",
+      "Cuire 18 min en retournant à mi-cuisson. Servir avec ketchup."
+    ]
+  },
+  {
+    "id": "boulettes-courgette",
+    "title": "Boulettes de courgette au four",
+    "slot": "dinner",
+    "timeMin": 30,
+    "description": "Boulettes végétariennes fondantes, dorées au four. Les enfants adorent.",
+    "tags": [
+      "vegetarien",
+      "enfants",
+      "au-four"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 3,
+        "unit": null,
+        "name": "courgettes",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 100,
+        "unit": "g",
+        "name": "chapelure",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "oeuf",
+        "name": "œufs",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "persil",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 200°C. Râper les courgettes.",
+      "Saler, laisser dégorger 10 min, presser pour ôter l'eau.",
+      "Mélanger courgette, chapelure, œufs, ail pressé, persil, sel.",
+      "Former 16 boulettes, déposer sur plaque huilée.",
+      "Cuire 20 min en retournant à mi-cuisson."
+    ]
+  },
+  {
+    "id": "croque-monsieur-vege",
+    "title": "Croque-monsieur dinde tomate",
+    "slot": "dinner",
+    "timeMin": 15,
+    "description": "Croque revisité au pain complet, dinde et sauce tomate, sans fromage.",
+    "tags": [
+      "francais",
+      "enfants",
+      "rapide"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 8,
+        "unit": "tranche",
+        "name": "pain complet",
+        "category": "pains-pates",
+        "scalable": true
+      },
+      {
+        "qty": 8,
+        "unit": "tranche",
+        "name": "jambon de dinde",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 4,
+        "unit": "cs",
+        "name": "concentré de tomate",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "origan séché",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 200°C.",
+      "Tartiner les tranches de pain de concentré de tomate.",
+      "Garnir de 2 tranches de dinde, parsemer d'origan, refermer.",
+      "Badigeonner d'huile les deux faces. Déposer sur plaque.",
+      "Cuire 10 min en retournant à mi-cuisson."
+    ]
+  },
+  {
+    "id": "pizza-jambon-maison",
+    "title": "Pizza maison jambon-olives",
+    "slot": "both",
+    "timeMin": 30,
+    "description": "Pizza maison sauce tomate, jambon et olives, sans fromage. Soirée pizza réussie.",
+    "tags": [
+      "italien",
+      "enfants",
+      "au-four",
+      "convivial"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "pâte à pizza",
+        "category": "pains-pates",
+        "scalable": true
+      },
+      {
+        "qty": 8,
+        "unit": "cs",
+        "name": "sauce tomate",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 8,
+        "unit": "tranche",
+        "name": "jambon",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 100,
+        "unit": "g",
+        "name": "olives noires dénoyautées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "origan séché",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 240°C.",
+      "Étaler les pâtes à pizza, tartiner de sauce tomate.",
+      "Répartir jambon en lamelles et olives. Parsemer d'origan.",
+      "Arroser d'un filet d'huile.",
+      "Cuire 12 min jusqu'à dorure de la pâte."
+    ]
+  },
+  {
+    "id": "poke-bowl-saumon",
+    "title": "Poke bowl saumon-avocat-edamame",
+    "slot": "dinner",
+    "timeMin": 20,
+    "description": "Bowl hawaïen frais: saumon cru mariné, avocat, edamame, riz vinaigré.",
+    "tags": [
+      "asiatique",
+      "poisson",
+      "rapide"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 400,
+        "unit": "g",
+        "name": "saumon cru extra frais",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 300,
+        "unit": "g",
+        "name": "riz à sushi",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "edamame surgelés",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "avocats",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 4,
+        "unit": "cs",
+        "name": "sauce soja",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "huile de sésame",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "graines de sésame",
+        "category": "epicerie",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "vinaigre de riz",
+        "category": "epicerie",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Rincer le riz, cuire 12 min. Assaisonner avec vinaigre de riz, sel, sucre.",
+      "Cuire les edamame 5 min en eau bouillante. Égoutter.",
+      "Couper le saumon en cubes, mariner avec sauce soja et huile de sésame 5 min.",
+      "Trancher les avocats.",
+      "Dresser dans 4 bols: riz, saumon, edamame, avocat, graines de sésame."
+    ]
+  },
+  {
+    "id": "harissa-poulet-couscous",
+    "title": "Poulet harissa & couscous perlé",
+    "slot": "dinner",
+    "timeMin": 35,
+    "description": "Poulet rôti à la harissa, couscous perlé aux herbes. Saveurs orientales.",
+    "tags": [
+      "oriental",
+      "viande",
+      "au-four",
+      "convivial"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 4,
+        "unit": "filet",
+        "name": "cuisses de poulet",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "cs",
+        "name": "harissa",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 300,
+        "unit": "g",
+        "name": "couscous perlé",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "citron",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "cumin moulu",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "menthe",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "persil",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 200°C.",
+      "Mélanger harissa, huile, cumin, sel. En badigeonner le poulet.",
+      "Rôtir le poulet 30 min en arrosant à mi-cuisson.",
+      "Cuire le couscous perlé 10 min en eau salée. Égoutter.",
+      "Mélanger couscous, herbes hachées, jus de citron, huile. Servir avec le poulet."
+    ]
+  },
+  {
+    "id": "kefta-coriandre",
+    "title": "Keftas de bœuf à la coriandre",
+    "slot": "dinner",
+    "timeMin": 25,
+    "description": "Brochettes de bœuf haché aux herbes, sauce yaourt coco à la menthe.",
+    "tags": [
+      "oriental",
+      "viande",
+      "une-poele"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 600,
+        "unit": "g",
+        "name": "bœuf haché",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "coriandre",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "menthe",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "cumin moulu",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "yaourt coco",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "citron",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Mélanger bœuf, oignon haché finement, coriandre, cumin, sel.",
+      "Former 8 brochettes longues. Réserver 10 min au frais.",
+      "Cuire à la poêle dans huile 8 min en retournant.",
+      "Mélanger yaourt coco, menthe hachée, jus de citron, sel.",
+      "Servir keftas avec sauce et pita ou semoule."
+    ]
+  },
+  {
+    "id": "bibimbap-vege",
+    "title": "Bibimbap végétarien",
+    "slot": "dinner",
+    "timeMin": 30,
+    "description": "Bowl coréen: riz, légumes croquants, œuf au plat, sauce gochujang piquante.",
+    "tags": [
+      "coreen",
+      "vegetarien",
+      "asiatique"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 300,
+        "unit": "g",
+        "name": "riz japonais",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 4,
+        "unit": "oeuf",
+        "name": "œufs",
+        "category": "frais",
+        "scalable": true
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "pousses d'épinards",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "champignons shiitaké",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "carottes",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "cs",
+        "name": "gochujang",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "sauce soja",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "huile de sésame",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "graines de sésame",
+        "category": "epicerie",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Cuire le riz 15 min.",
+      "Sauter séparément: épinards 2 min, shiitaké 5 min, carottes râpées 3 min. Saler.",
+      "Cuire 4 œufs au plat dans huile.",
+      "Mélanger gochujang, sauce soja, huile de sésame, 2 cs d'eau.",
+      "Dresser dans 4 bols: riz, légumes en quartiers, œuf, sauce, sésame."
+    ]
+  },
+  {
+    "id": "tacos-poisson-coriandre",
+    "title": "Tacos cabillaud, chou rouge, lime",
+    "slot": "dinner",
+    "timeMin": 20,
+    "description": "Tacos frais: cabillaud grillé, chou rouge croquant, coriandre et lime.",
+    "tags": [
+      "mexicain",
+      "poisson",
+      "rapide"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 500,
+        "unit": "g",
+        "name": "filets de cabillaud",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 8,
+        "unit": null,
+        "name": "tortillas de maïs",
+        "category": "pains-pates",
+        "scalable": true
+      },
+      {
+        "qty": 300,
+        "unit": "g",
+        "name": "chou rouge",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "limes",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "coriandre",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "paprika fumé",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "cumin moulu",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "avocat",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Émincer finement le chou rouge, mélanger avec jus de lime, sel. Réserver.",
+      "Frotter le cabillaud de paprika, cumin, sel, huile.",
+      "Griller le cabillaud 4 min de chaque côté à la poêle. Émietter.",
+      "Réchauffer les tortillas 1 min de chaque côté à la poêle sèche.",
+      "Garnir: chou, poisson, avocat, coriandre. Servir avec quartiers de lime."
+    ]
   }
 ]

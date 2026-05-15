@@ -286,5 +286,99 @@
         "dinner": "pates-ail-pignons"
       }
     ]
+  },
+  {
+    "id": "familial",
+    "name": "Familial enfants",
+    "theme": "Goûts simples, recettes que les enfants aiment",
+    "defaultConstraints": [
+      "sans-lactose"
+    ],
+    "seasons": [],
+    "cover": "https://source.unsplash.com/featured/600x400/?family,dinner",
+    "days": [
+      {
+        "day": "Lundi",
+        "lunch": "salade-pois-chiches",
+        "dinner": "tomato-mozza-pates"
+      },
+      {
+        "day": "Mardi",
+        "lunch": "wrap-thon",
+        "dinner": "nuggets-poulet-maison"
+      },
+      {
+        "day": "Mercredi",
+        "lunch": "pizza-fine",
+        "dinner": "boulettes-courgette"
+      },
+      {
+        "day": "Jeudi",
+        "lunch": "salade-pois-chiches",
+        "dinner": "croque-monsieur-vege"
+      },
+      {
+        "day": "Vendredi",
+        "lunch": "pita-falafels",
+        "dinner": "pates-crevettes-ail"
+      },
+      {
+        "day": "Samedi",
+        "lunch": "pizza-jambon-maison",
+        "dinner": "tomato-mozza-pates"
+      },
+      {
+        "day": "Dimanche",
+        "lunch": "salade-nicoise",
+        "dinner": "minestrone"
+      }
+    ]
+  },
+  {
+    "id": "decouverte",
+    "name": "Découverte fusion",
+    "theme": "Saveurs du monde, accents asiatiques et orientaux",
+    "defaultConstraints": [
+      "sans-lactose"
+    ],
+    "seasons": [],
+    "cover": "https://source.unsplash.com/featured/600x400/?asian,fusion,food",
+    "days": [
+      {
+        "day": "Lundi",
+        "lunch": "salade-pois-chiches",
+        "dinner": "harissa-poulet-couscous"
+      },
+      {
+        "day": "Mardi",
+        "lunch": "wrap-thon",
+        "dinner": "poke-bowl-saumon"
+      },
+      {
+        "day": "Mercredi",
+        "lunch": "bowl-quinoa-lentilles",
+        "dinner": "bibimbap-vege"
+      },
+      {
+        "day": "Jeudi",
+        "lunch": "salade-nicoise",
+        "dinner": "kefta-coriandre"
+      },
+      {
+        "day": "Vendredi",
+        "lunch": "pita-falafels",
+        "dinner": "tacos-poisson-coriandre"
+      },
+      {
+        "day": "Samedi",
+        "lunch": "pizza-fine",
+        "dinner": "harissa-poulet-couscous"
+      },
+      {
+        "day": "Dimanche",
+        "lunch": "bowl-quinoa-lentilles",
+        "dinner": "poke-bowl-saumon"
+      }
+    ]
   }
 ]
