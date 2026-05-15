@@ -6,6 +6,7 @@ import { openRecipeModal } from './js/views/recipe-modal.js';
 import { openWizard } from './js/views/wizard.js';
 import { openSwapModal } from './js/views/swap-modal.js';
 import { renderCourses } from './js/views/courses.js';
+import { renderRecettes } from './js/views/recettes.js';
 import { enterShoppingMode, exitShoppingMode } from './js/ui/shopping-mode.js';
 import { shareShoppingList } from './js/ui/share.js';
 import { buildShoppingList } from './js/shopping.js';
@@ -66,6 +67,32 @@ function openRecipeFor(day, slot, recipeId) {
   });
 }
 
+function openRecipeStandalone(recipeId) {
+  const s = state.load();
+  const recipe = _dataCache.recipesById[recipeId];
+  openRecipeModal({
+    recipe,
+    peopleEffective: s.preferences.defaultPeople,
+    isFavorite: s.preferences.favorites.includes(recipeId),
+    isCooked: false,
+    note: undefined,
+    callbacks: {
+      onToggleFavorite: () => {
+        state.mutate(d => {
+          const i = d.preferences.favorites.indexOf(recipeId);
+          if (i >= 0) d.preferences.favorites.splice(i, 1);
+          else d.preferences.favorites.push(recipeId);
+        });
+        rerender();
+        openRecipeStandalone(recipeId);
+      },
+      onPeopleOverride: () => {},
+      onNoteChange: () => {},
+      onToggleCooked: () => {}
+    }
+  });
+}
+
 function rerender() {
   const s = state.load();
   const callbacks = {
@@ -102,6 +129,7 @@ function rerender() {
       rerender();
     },
     onOpenRecipe: (day, slot, recipeId) => openRecipeFor(day, slot, recipeId),
+    onOpenRecipeStandalone: (recipeId) => openRecipeStandalone(recipeId),
     onMealAction: (day, slot) => {
       const action = prompt('Action : "cooked" / "swap" / annuler');
       if (action === 'cooked') {
@@ -192,6 +220,7 @@ function rerender() {
   };
   renderSemaine(document.getElementById('view-semaine'), { state: s, data: _dataCache, callbacks });
   renderCourses(document.getElementById('view-courses'), { state: s, data: _dataCache, callbacks });
+  renderRecettes(document.getElementById('view-recettes'), { state: s, data: _dataCache, callbacks });
 }
 
 document.addEventListener('DOMContentLoaded', main);
