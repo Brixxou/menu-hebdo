@@ -93,5 +93,53 @@
         "dinner": "curry-coco-poisson"
       }
     ]
+  },
+  {
+    "id": "hiver-reconfort",
+    "name": "Hiver réconfort",
+    "theme": "Soupes, mijotés, plats au four",
+    "defaultConstraints": [
+      "sans-lactose"
+    ],
+    "seasons": [
+      "hiver"
+    ],
+    "days": [
+      {
+        "day": "Lundi",
+        "lunch": "salade-pois-chiches",
+        "dinner": "soupe-lentilles-corail"
+      },
+      {
+        "day": "Mardi",
+        "lunch": "wrap-thon",
+        "dinner": "gratin-patate-douce"
+      },
+      {
+        "day": "Mercredi",
+        "lunch": "bowl-quinoa-lentilles",
+        "dinner": "curry-courge-pois-chiches"
+      },
+      {
+        "day": "Jeudi",
+        "lunch": "salade-nicoise",
+        "dinner": "risotto-champignons"
+      },
+      {
+        "day": "Vendredi",
+        "lunch": "pita-falafels",
+        "dinner": "tartiflette-sans-fromage"
+      },
+      {
+        "day": "Samedi",
+        "lunch": "pizza-fine",
+        "dinner": "daube-boeuf-olives"
+      },
+      {
+        "day": "Dimanche",
+        "lunch": "pot-au-feu-leger",
+        "dinner": "parmentier-canard-patate"
+      }
+    ]
   }
 ]

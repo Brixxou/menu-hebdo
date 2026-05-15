@@ -2062,5 +2062,797 @@
       "Verser nouilles et sauce, sauter 3 min à feu vif.",
       "Ajouter pousses de soja, mélanger 1 min. Servir avec cacahuètes concassées, citron vert et oignons nouveaux."
     ]
+  },
+  {
+    "id": "gratin-patate-douce",
+    "title": "Gratin de patate douce sans fromage",
+    "slot": "dinner",
+    "timeMin": 50,
+    "description": "Patate douce fondante nappée d'une béchamel au lait de coco, gratinée à la chapelure aux herbes pour le croustillant.",
+    "tags": [
+      "au-four",
+      "vegetarien"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 1200,
+        "unit": "g",
+        "name": "patates douces",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 400,
+        "unit": "ml",
+        "name": "lait de coco",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "farine",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 60,
+        "unit": "g",
+        "name": "chapelure",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "thym séché",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "noix muscade",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 200°C.",
+      "Éplucher les patates douces et les trancher en rondelles de 3 mm.",
+      "Préparer la béchamel coco : chauffer 2 cs d'huile, ajouter la farine, fouetter avec le lait de coco, ail haché, muscade, sel.",
+      "Disposer les rondelles dans un plat huilé, napper de béchamel.",
+      "Mélanger chapelure et thym, parsemer en surface, arroser d'un filet d'huile.",
+      "Enfourner 35 min jusqu'à ce que le dessus soit doré."
+    ]
+  },
+  {
+    "id": "soupe-lentilles-corail",
+    "title": "Soupe de lentilles corail au curcuma",
+    "slot": "dinner",
+    "timeMin": 25,
+    "description": "Velouté épais et rassasiant aux lentilles corail, parfumé au curcuma et au gingembre, finition au citron.",
+    "tags": [
+      "vegetarien",
+      "legumineuses",
+      "mijote"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 300,
+        "unit": "g",
+        "name": "lentilles corail",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "carottes",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "gingembre frais (3 cm)",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cc",
+        "name": "curcuma",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "cumin",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1200,
+        "unit": "ml",
+        "name": "bouillon de légumes",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "citron",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "coriandre",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Faire revenir oignon, carottes en dés, ail et gingembre 5 min dans l'huile.",
+      "Ajouter curcuma et cumin, torréfier 1 min.",
+      "Verser lentilles et bouillon, porter à ébullition.",
+      "Laisser cuire 18 min à couvert jusqu'à ce que les lentilles soient fondantes.",
+      "Mixer pour un velouté lisse, ajuster sel et poivre.",
+      "Servir avec jus de citron, coriandre et un filet d'huile."
+    ]
+  },
+  {
+    "id": "curry-courge-pois-chiches",
+    "title": "Curry de courge butternut et pois chiches",
+    "slot": "dinner",
+    "timeMin": 35,
+    "description": "Cubes de butternut moelleux dans un curry coco aux épices douces, pois chiches fondants et épinards en finition.",
+    "tags": [
+      "vegetarien",
+      "legumineuses",
+      "mijote"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 800,
+        "unit": "g",
+        "name": "courge butternut",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "boite",
+        "name": "pois chiches (400 g)",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 400,
+        "unit": "ml",
+        "name": "lait de coco",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "pousses d'épinards",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "pâte de curry jaune",
+        "category": "epices",
+        "scalable": true
+      },
+      {
+        "qty": 200,
+        "unit": "g",
+        "name": "riz basmati",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "citron vert",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile neutre",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 200°C. Peler et tailler la butternut en cubes.",
+      "Faire revenir oignon et ail 5 min, ajouter la pâte de curry 1 min.",
+      "Ajouter les cubes de butternut, le lait de coco et 200 ml d'eau, laisser mijoter 20 min.",
+      "Lancer le riz basmati en parallèle.",
+      "Ajouter les pois chiches égouttés, cuire 5 min.",
+      "Incorporer les épinards en fin de cuisson, finir avec jus de citron vert. Servir avec le riz."
+    ]
+  },
+  {
+    "id": "pot-au-feu-leger",
+    "title": "Pot-au-feu léger aux légumes d'hiver",
+    "slot": "dinner",
+    "timeMin": 90,
+    "description": "Bœuf maigre fondant, carottes, poireaux et navets mijotés dans un bouillon clair parfumé au clou de girofle.",
+    "tags": [
+      "francais",
+      "mijote",
+      "convivial"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 800,
+        "unit": "g",
+        "name": "bœuf à pot-au-feu (paleron, gîte)",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 4,
+        "unit": null,
+        "name": "carottes",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": null,
+        "name": "poireaux",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": null,
+        "name": "navets",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "clous de girofle",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "bouquet garni",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 4,
+        "unit": null,
+        "name": "pommes de terre moyennes",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "gros sel",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "poivre en grains",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "moutarde, cornichons",
+        "category": "epicerie",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Placer le bœuf dans une grande cocotte, couvrir d'eau froide, porter à ébullition. Écumer.",
+      "Piquer l'oignon des clous de girofle. Ajouter avec le bouquet garni, sel et poivre.",
+      "Laisser frémir 60 min à couvert.",
+      "Ajouter carottes, poireaux et navets entiers, cuire 20 min.",
+      "Ajouter les pommes de terre, cuire 20 min de plus.",
+      "Servir bouillon, viande tranchée et légumes avec moutarde et cornichons."
+    ]
+  },
+  {
+    "id": "daube-boeuf-olives",
+    "title": "Daube de bœuf aux olives noires",
+    "slot": "dinner",
+    "timeMin": 150,
+    "description": "Bœuf qui se défait à la fourchette, mijoté longuement dans le vin rouge avec carottes, olives noires et zeste d'orange.",
+    "tags": [
+      "francais",
+      "mijote",
+      "convivial"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 1000,
+        "unit": "g",
+        "name": "bœuf à mijoter (joue ou gîte)",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 500,
+        "unit": "ml",
+        "name": "vin rouge",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 4,
+        "unit": null,
+        "name": "carottes",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": null,
+        "name": "oignons",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 4,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 150,
+        "unit": "g",
+        "name": "olives noires dénoyautées",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "orange (zeste)",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "bouquet garni",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "cs",
+        "name": "farine",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Couper le bœuf en gros cubes, saler, fariner.",
+      "Dans une cocotte, saisir la viande 8 min dans l'huile d'olive, réserver.",
+      "Faire suer oignons en lamelles et ail 5 min.",
+      "Remettre la viande, ajouter carottes en rondelles, bouquet garni, zeste d'orange.",
+      "Mouiller avec le vin et autant d'eau. Couvrir et cuire 2 h à feu très doux.",
+      "Ajouter les olives dans les 15 dernières minutes. Servir avec pommes vapeur ou pâtes."
+    ]
+  },
+  {
+    "id": "parmentier-canard-patate",
+    "title": "Parmentier de canard à la patate douce",
+    "slot": "dinner",
+    "timeMin": 40,
+    "description": "Confit de canard effiloché sous une purée onctueuse de patate douce gratinée, version sans lactose.",
+    "tags": [
+      "francais",
+      "au-four",
+      "convivial"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 4,
+        "unit": null,
+        "name": "cuisses de canard confit",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 1200,
+        "unit": "g",
+        "name": "patates douces",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 100,
+        "unit": "ml",
+        "name": "lait de coco",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "noix muscade",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "persil plat",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": 40,
+        "unit": "g",
+        "name": "chapelure",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Préchauffer le four à 200°C.",
+      "Éplucher les patates douces, cuire en cubes 15 min à l'eau bouillante salée.",
+      "Faire chauffer les cuisses de canard 5 min, désosser et effilocher.",
+      "Faire revenir oignon et ail hachés 5 min, mélanger au canard avec le persil.",
+      "Écraser les patates avec lait de coco, muscade, sel, poivre.",
+      "Dans un plat, étaler la viande, recouvrir de purée, parsemer de chapelure. Enfourner 15 min."
+    ]
+  },
+  {
+    "id": "risotto-champignons",
+    "title": "Risotto aux champignons (sans lactose)",
+    "slot": "dinner",
+    "timeMin": 35,
+    "description": "Riz arborio crémeux, champignons de Paris et cèpes parfumés, levure maltée à la place du parmesan pour la rondeur.",
+    "tags": [
+      "italien",
+      "vegetarien",
+      "mijote"
+    ],
+    "constraints": [
+      "sans-lactose",
+      "vegetarien"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 300,
+        "unit": "g",
+        "name": "riz arborio",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 500,
+        "unit": "g",
+        "name": "champignons de Paris",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 20,
+        "unit": "g",
+        "name": "cèpes séchés",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": null,
+        "name": "oignon",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1000,
+        "unit": "ml",
+        "name": "bouillon de légumes",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 100,
+        "unit": "ml",
+        "name": "vin blanc sec",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": "cs",
+        "name": "levure maltée",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "botte",
+        "name": "persil plat",
+        "category": "fruits-legumes",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Réhydrater les cèpes 10 min dans 200 ml d'eau chaude, garder le jus filtré.",
+      "Faire chauffer le bouillon avec le jus des cèpes.",
+      "Faire revenir oignon haché 3 min, ajouter le riz et nacrer 2 min.",
+      "Déglacer au vin blanc, laisser absorber.",
+      "Ajouter louche à louche le bouillon chaud en remuant 18 min. À mi-cuisson, incorporer champignons émincés et cèpes.",
+      "Hors du feu, ajouter levure maltée, ail haché et persil. Servir aussitôt."
+    ]
+  },
+  {
+    "id": "tartiflette-sans-fromage",
+    "title": "Tartiflette sans fromage à la crème de soja",
+    "slot": "dinner",
+    "timeMin": 50,
+    "description": "Pommes de terre, lardons et oignons fondants, liés avec une crème de soja relevée à la moutarde, version qui réconforte sans le fromage.",
+    "tags": [
+      "francais",
+      "au-four",
+      "convivial"
+    ],
+    "constraints": [
+      "sans-lactose"
+    ],
+    "basePeople": 4,
+    "ingredients": [
+      {
+        "qty": 1200,
+        "unit": "g",
+        "name": "pommes de terre à chair ferme",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 250,
+        "unit": "g",
+        "name": "lardons fumés",
+        "category": "viandes-poissons",
+        "scalable": true
+      },
+      {
+        "qty": 3,
+        "unit": null,
+        "name": "oignons",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 200,
+        "unit": "ml",
+        "name": "crème de soja",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cs",
+        "name": "moutarde à l'ancienne",
+        "category": "epicerie",
+        "scalable": false
+      },
+      {
+        "qty": 2,
+        "unit": "gousse",
+        "name": "ail",
+        "category": "fruits-legumes",
+        "scalable": true
+      },
+      {
+        "qty": 1,
+        "unit": "cc",
+        "name": "thym séché",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": 40,
+        "unit": "g",
+        "name": "chapelure",
+        "category": "epicerie",
+        "scalable": true
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "huile d'olive",
+        "category": "epices",
+        "scalable": false
+      },
+      {
+        "qty": null,
+        "unit": null,
+        "name": "sel, poivre",
+        "category": "epices",
+        "scalable": false
+      }
+    ],
+    "steps": [
+      "Cuire les pommes de terre en robe 20 min à l'eau bouillante salée. Peler et trancher.",
+      "Préchauffer le four à 200°C.",
+      "Faire dorer les lardons à sec 5 min, réserver. Faire fondre les oignons en lamelles 10 min dans le gras.",
+      "Mélanger crème de soja, moutarde, ail haché, thym, sel, poivre.",
+      "Dans un plat, alterner pommes de terre, lardons et oignons, napper de la crème.",
+      "Parsemer de chapelure, enfourner 20 min."
+    ]
   }
 ]
