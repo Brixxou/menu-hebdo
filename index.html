@@ -12,7 +12,17 @@
 </head>
 <body>
   <main id="app">
-    <div id="loading">Chargement…</div>
+    <header class="app-header">
+      <h1 id="app-title">Menu Hebdo</h1>
+    </header>
+    <section id="view-semaine" class="view active" data-tab="semaine"></section>
+    <section id="view-courses" class="view" data-tab="courses"></section>
+    <section id="view-recettes" class="view" data-tab="recettes"></section>
+    <nav class="tab-bar">
+      <button class="tab-btn active" data-target="semaine"><span class="tab-icon">🍽</span><span>Semaine</span></button>
+      <button class="tab-btn" data-target="courses"><span class="tab-icon">🛒</span><span>Courses</span></button>
+      <button class="tab-btn" data-target="recettes"><span class="tab-icon">📖</span><span>Recettes</span></button>
+    </nav>
   </main>
   <script type="module" src="app.js"></script>
 </body>
