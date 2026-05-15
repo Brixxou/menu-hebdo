@@ -380,3 +380,58 @@ body {
 }
 .swap-title { font-size: 16px; }
 .swap-meta { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+
+/* === Vue Courses === */
+.empty-text { text-align: center; color: var(--text-muted); padding: 48px 16px; }
+.courses-header { margin-bottom: 12px; }
+.courses-stats { color: var(--text-muted); font-size: 13px; margin-bottom: 8px; }
+.courses-actions { display: flex; gap: 8px; }
+.courses-actions .btn-secondary { padding: 8px 12px; font-size: 13px; flex: 1; }
+.course-cat {
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-card);
+}
+.cat-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: grab;
+}
+.cat-drag { color: var(--text-muted); font-size: 14px; }
+.cat-head h3 { font-size: 15px; font-weight: 600; }
+.cat-list { list-style: none; margin-top: 8px; }
+.cat-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--separator);
+  cursor: pointer;
+}
+.cat-list li:first-child { border-top: none; }
+.check {
+  width: 22px; height: 22px;
+  border: 1.5px solid var(--text-muted);
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+}
+.cat-list li.checked { opacity: 0.45; }
+.cat-list li.checked .item-name { text-decoration: line-through; }
+.cat-list li.checked .check {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.cat-list li.checked .check::after {
+  content: '✓';
+  color: white;
+  position: absolute;
+  inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.item-name { flex: 1; }
+.item-qty { color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 14px; }

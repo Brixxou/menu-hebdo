@@ -1,0 +1,98 @@
+// js/views/courses.js — rendu de l'onglet liste de courses
+
+import { buildShoppingList } from '../shopping.js';
+import { ingredientKey } from '../keys.js';
+import { formatQty } from '../utils.js';
+
+export function renderCourses(container, { state, data, callbacks }) {
+  container.innerHTML = '';
+  if (!state.activeWeek) {
+    container.innerHTML = `<p class="empty-text">Démarre une semaine pour générer ta liste de courses.</p>`;
+    return;
+  }
+  const list = buildShoppingList(state.activeWeek, data.recipesById, state.preferences.aisleOrder);
+  const totalItems = list.reduce((s, c) => s + c.items.filter(i => !state.shoppingList.inStock[ingredientKey(i)]).length, 0);
+
+  const header = document.createElement('div');
+  header.className = 'courses-header';
+  header.innerHTML = `
+    <div class="courses-stats">${totalItems} articles · ${list.length} rayons</div>
+    <div class="courses-actions">
+      <button class="btn-secondary" id="btn-shopping-mode">🔍 Supermarché</button>
+      <button class="btn-secondary" id="btn-share">📤 Partager</button>
+      <button class="btn-secondary" id="btn-uncheck-all">Tout décocher</button>
+    </div>
+  `;
+  header.querySelector('#btn-shopping-mode').addEventListener('click', callbacks.onShoppingMode);
+  header.querySelector('#btn-share').addEventListener('click', callbacks.onShare);
+  header.querySelector('#btn-uncheck-all').addEventListener('click', callbacks.onUncheckAll);
+  container.appendChild(header);
+
+  for (const cat of list) {
+    container.appendChild(renderCategory(cat, state, callbacks));
+  }
+}
+
+function renderCategory(cat, state, callbacks) {
+  const section = document.createElement('section');
+  section.className = 'course-cat';
+  section.dataset.category = cat.category;
+  section.innerHTML = `
+    <header class="cat-head" draggable="true">
+      <span class="cat-drag">⋮⋮</span>
+      <h3>${labelForCategory(cat.category)}</h3>
+    </header>
+    <ul class="cat-list">
+      ${cat.items.map(item => {
+        const k = ingredientKey(item);
+        const checked = state.shoppingList.checked[k];
+        const inStock = state.shoppingList.inStock[k];
+        if (inStock) return '';
+        return `
+          <li class="${checked ? 'checked' : ''}" data-key="${k}">
+            <span class="check"></span>
+            <span class="item-name">${escapeHtml(item.name)}</span>
+            <span class="item-qty">${formatQty(item)}</span>
+          </li>
+        `;
+      }).join('')}
+    </ul>
+  `;
+  section.querySelectorAll('li').forEach(li => {
+    let pressTimer = null;
+    let suppressClick = false;
+    li.addEventListener('pointerdown', () => {
+      pressTimer = setTimeout(() => {
+        suppressClick = true;
+        pressTimer = null;
+        callbacks.onMarkInStock(li.dataset.key);
+      }, 600);
+    });
+    const cancelTimer = () => {
+      if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; }
+    };
+    li.addEventListener('pointerup', cancelTimer);
+    li.addEventListener('pointerleave', cancelTimer);
+    li.addEventListener('pointercancel', cancelTimer);
+    li.addEventListener('click', () => {
+      if (suppressClick) { suppressClick = false; return; }
+      callbacks.onToggleChecked(li.dataset.key);
+    });
+  });
+  return section;
+}
+
+const LABELS = {
+  'fruits-legumes': '🥬 Fruits & légumes',
+  'viandes-poissons': '🐟 Viandes & poissons',
+  'pains-pates': '🥖 Pains & pâtes',
+  'frais': '🥚 Frais',
+  'epicerie': '🍝 Épicerie',
+  'epices': '🫒 Épices & huiles',
+  'en-cas': '🥜 En-cas'
+};
+function labelForCategory(c) { return LABELS[c] ?? c; }
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}

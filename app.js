@@ -5,6 +5,7 @@ import { renderSemaine } from './js/views/semaine.js';
 import { openRecipeModal } from './js/views/recipe-modal.js';
 import { openWizard } from './js/views/wizard.js';
 import { openSwapModal } from './js/views/swap-modal.js';
+import { renderCourses } from './js/views/courses.js';
 
 const state = createState();
 
@@ -132,9 +133,24 @@ function rerender() {
         if (dayObj && dayObj[slot]) dayObj[slot].peopleOverride = n;
       });
       rerender();
-    }
+    },
+    onToggleChecked: (k) => {
+      state.mutate(d => { d.shoppingList.checked[k] = !d.shoppingList.checked[k]; });
+      rerender();
+    },
+    onMarkInStock: (k) => {
+      state.mutate(d => { d.shoppingList.inStock[k] = true; });
+      rerender();
+    },
+    onUncheckAll: () => {
+      state.mutate(d => { d.shoppingList.checked = {}; });
+      rerender();
+    },
+    onShare: () => console.log('TODO: share'),
+    onShoppingMode: () => console.log('TODO: shopping mode')
   };
   renderSemaine(document.getElementById('view-semaine'), { state: s, data: _dataCache, callbacks });
+  renderCourses(document.getElementById('view-courses'), { state: s, data: _dataCache, callbacks });
 }
 
 document.addEventListener('DOMContentLoaded', main);
