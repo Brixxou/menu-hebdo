@@ -39,8 +39,7 @@ body {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.55;
-  min-height: 100vh;
-  padding-bottom: env(safe-area-inset-bottom);
+  min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -60,7 +59,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100dvh;
   color: var(--ink-muted);
   font-family: var(--font-mono);
   font-size: 12px;
@@ -103,8 +102,8 @@ body::before {
 
 .view {
   display: none;
-  padding: 24px 24px 96px;
-  min-height: calc(100vh - 120px);
+  padding: 24px 24px calc(96px + env(safe-area-inset-bottom));
+  min-height: calc(100dvh - 120px);
   position: relative;
   z-index: 1;
 }
@@ -114,9 +113,7 @@ body::before {
   position: fixed;
   bottom: 0; left: 0; right: 0;
   display: flex;
-  background: rgba(244, 237, 224, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: var(--paper);
   border-top: 1px solid var(--rule);
   padding-bottom: env(safe-area-inset-bottom);
   z-index: 20;
