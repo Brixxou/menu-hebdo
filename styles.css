@@ -266,5 +266,19 @@ body {
   resize: vertical;
 }
 
+.cooked-row { margin: 24px 0 0; }
+.btn-secondary {
+  background: rgba(120, 120, 128, 0.12);
+  color: var(--text);
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius-button);
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+}
+.btn-secondary[aria-pressed="true"] { background: rgba(52, 199, 89, 0.15); color: #34c759; }
+
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }

@@ -3,7 +3,7 @@
 import { scaleIngredient } from '../scaling.js';
 import { formatQty } from '../utils.js';
 
-export function openRecipeModal({ recipe, peopleEffective, isFavorite, note, callbacks }) {
+export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked, note, callbacks }) {
   const root = document.getElementById('modal-root');
   root.innerHTML = '';
   const sheet = document.createElement('div');
@@ -32,6 +32,11 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, note, cal
         <ol class="steps-list">
           ${recipe.steps.map(s => `<li>${escapeHtml(s)}</li>`).join('')}
         </ol>
+        <div class="cooked-row">
+          <button class="btn-secondary cooked-toggle" aria-pressed="${isCooked}">
+            ${isCooked ? '✓ Repas fait' : 'Marquer comme fait'}
+          </button>
+        </div>
         <h3 class="section-h">Notes perso</h3>
         <textarea class="recipe-notes" rows="3" placeholder="Tes notes…">${escapeHtml(note ?? '')}</textarea>
       </div>
@@ -46,6 +51,7 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, note, cal
     const n = parseInt(prompt('Pour combien de personnes ?', peopleEffective), 10);
     if (!isNaN(n) && n >= 1 && n <= 12) callbacks.onPeopleOverride(n);
   });
+  sheet.querySelector('.cooked-toggle').addEventListener('click', () => callbacks.onToggleCooked());
   sheet.querySelector('.recipe-notes').addEventListener('input', e => callbacks.onNoteChange(e.target.value));
 
   function close() { root.innerHTML = ''; }

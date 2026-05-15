@@ -30,6 +30,7 @@ function rerender() {
         recipe,
         peopleEffective,
         isFavorite: cur.preferences.favorites.includes(recipeId),
+        isCooked: !!meal.cooked,
         note: cur.activeWeek.notes?.[recipeId],
         callbacks: {
           onToggleFavorite: () => {
@@ -37,6 +38,13 @@ function rerender() {
               const i = d.preferences.favorites.indexOf(recipeId);
               if (i >= 0) d.preferences.favorites.splice(i, 1);
               else d.preferences.favorites.push(recipeId);
+            });
+            rerender();
+          },
+          onToggleCooked: () => {
+            state.mutate(d => {
+              const dayObj = d.activeWeek.days.find(x => x.day === day);
+              dayObj[slot].cooked = !dayObj[slot].cooked;
             });
             rerender();
           },
