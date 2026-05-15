@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu de la semaine · 4 personnes · Méditerranéen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4ede0;
+    --bg-warm: #ede2cf;
+    --paper: #faf5ea;
+    --ink: #2a1f15;
+    --ink-soft: #5c4a37;
+    --terracotta: #c2562a;
+    --terracotta-deep: #8f3a18;
+    --olive: #5e6b3b;
+    --olive-deep: #3d4825;
+    --gold: #c89b3c;
+    --rule: #d4c4a8;
+    --shadow: 0 1px 0 rgba(42,31,21,.08), 0 12px 32px -16px rgba(42,31,21,.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Grain texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.2 0 0 0 0 0.15 0 0 0 0 0.1 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1000;
+    mix-blend-mode: multiply;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ============ HEADER ============ */
+  header {
+    padding: 48px 0 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 56px;
+  }
+
+  .top-bar .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--terracotta);
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  .masthead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 32px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(48px, 9vw, 128px);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+
+  h1 .italic {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--terracotta);
+  }
+
+  .subtitle {
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    line-height: 1.8;
+    padding-bottom: 12px;
+  }
+
+  .subtitle strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* Decorative tag */
+  .tag-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    padding: 6px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 100px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    background: var(--paper);
+  }
+
+  .tag.accent {
+    background: var(--terracotta);
+    color: var(--paper);
+    border-color: var(--terracotta);
+  }
+
+  .tag.olive {
+    background: var(--olive);
+    color: var(--paper);
+    border-color: var(--olive);
+  }
+
+  /* ============ NAV ============ */
+  nav.tabs {
+    display: flex;
+    gap: 0;
+    margin: 48px 0 32px;
+    border-bottom: 2px solid var(--ink);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  nav.tabs::-webkit-scrollbar { display: none; }
+
+  .tab-btn {
+    background: none;
+    border: none;
+    padding: 16px 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+    margin-bottom: -2px;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+
+  .tab-btn:hover { color: var(--ink); }
+
+  .tab-btn.active {
+    color: var(--terracotta);
+    border-bottom-color: var(--terracotta);
+  }
+
+  .tab-btn .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    margin-right: 6px;
+    color: var(--gold);
+  }
+
+  /* ============ SECTIONS ============ */
+  section.panel {
+    display: none;
+    padding: 32px 0 96px;
+    animation: fadeIn 0.4s ease;
+  }
+
+  section.panel.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+  }
+
+  h2 .italic { font-style: italic; color: var(--terracotta); }
+
+  /* ============ PLAN — WEEKLY GRID ============ */
+  .week-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  .day-card {
+    background: var(--paper);
+    padding: 28px 24px;
+    position: relative;
+    min-height: 240px;
+    transition: background 0.2s;
+  }
+
+  .day-card:hover { background: var(--bg-warm); }
+
+  .day-card .day-num {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--rule);
+    font-weight: 300;
+  }
+
+  .day-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .meal {
+    margin-bottom: 16px;
+  }
+
+  .meal-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-bottom: 4px;
+  }
+
+  .meal-name {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  /* ============ RECETTES ============ */
+  .recipe-grid {
+    display: grid;
+    gap: 48px;
+  }
+
+  .recipe {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .recipe:last-child { border-bottom: none; }
+
+  .recipe-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .recipe-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 72px;
+    font-weight: 300;
+    color: var(--terracotta);
+    line-height: 0.8;
+    margin-bottom: 24px;
+  }
+
+  .recipe-tags {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .recipe-tags span::before {
+    content: '— ';
+    color: var(--gold);
+  }
+
+  .recipe h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .recipe h3 .italic { font-style: italic; color: var(--terracotta); }
+
+  .recipe-desc {
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+    font-size: 15px;
+    max-width: 60ch;
+  }
+
+  .recipe-cols {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 32px;
+  }
+
+  .recipe-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .ingredients-list, .steps-list {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+
+  .ingredients-list li {
+    list-style: none;
+    padding: 4px 0;
+    color: var(--ink);
+  }
+
+  .ingredients-list li::before {
+    content: '◦';
+    color: var(--terracotta);
+    margin-right: 10px;
+    font-weight: bold;
+  }
+
+  .steps-list {
+    counter-reset: step;
+  }
+
+  .steps-list li {
+    list-style: none;
+    counter-increment: step;
+    padding: 6px 0 6px 32px;
+    position: relative;
+    color: var(--ink);
+  }
+
+  .steps-list li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--terracotta);
+    font-size: 16px;
+  }
+
+  /* ============ LISTE DE COURSES ============ */
+  .courses-intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--rule);
+    align-items: end;
+  }
+
+  .courses-intro p {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    max-width: 50ch;
+  }
+
+  .courses-intro p .italic {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: right;
+  }
+
+  .stat-line {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    align-items: baseline;
+  }
+
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--terracotta);
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+  }
+
+  .course-cat {
+    background: var(--paper);
+    padding: 28px;
+    border: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .course-cat-num {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  .course-cat h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  .course-cat h4 .italic { font-style: italic; color: var(--terracotta); }
+
+  .course-cat-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .course-list {
+    list-style: none;
+  }
+
+  .course-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--rule);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .course-list li:last-child { border-bottom: none; }
+
+  .course-list li.checked {
+    opacity: 0.4;
+    text-decoration: line-through;
+  }
+
+  .check {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--ink-soft);
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    position: relative;
+    transition: all 0.2s;
+  }
+
+  .course-list li.checked .check {
+    background: var(--olive);
+    border-color: var(--olive);
+  }
+
+  .course-list li.checked .check::after {
+    content: '✓';
+    color: var(--paper);
+    font-size: 12px;
+    position: absolute;
+    top: -3px;
+    left: 2px;
+  }
+
+  .qty {
+    color: var(--ink-soft);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 32px 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .masthead { grid-template-columns: 1fr; }
+    .subtitle { text-align: left; }
+    .recipe { grid-template-columns: 1fr; gap: 24px; }
+    .recipe-cols { grid-template-columns: 1fr; gap: 24px; }
+    .courses-intro { grid-template-columns: 1fr; }
+    .stats { text-align: left; align-items: flex-start; }
+    .stat-line { justify-content: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="top-bar">
+      <div><span class="dot"></span>Menu hebdo · Semaine 20</div>
+      <div>Édition 01 · Mai 2026</div>
+    </div>
+
+    <div class="masthead">
+      <h1>Méditer<span class="italic">ranéen</span>,<br>7 jours.</h1>
+      <div class="subtitle">
+        Pour <strong>4 personnes</strong><br>
+        Dîners <strong>≤ 20 min</strong><br>
+        <strong>Sans lactose</strong>
+      </div>
+    </div>
+
+    <div class="tag-row">
+      <span class="tag accent">Poisson ×3</span>
+      <span class="tag olive">Végétarien ×2</span>
+      <span class="tag">Volaille ×2</span>
+      <span class="tag">Légumineuses ×4</span>
+      <span class="tag">Huile d'olive partout</span>
+    </div>
+  </header>
+
+  <!-- TABS -->
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="plan"><span class="num">i.</span>Plan de la semaine</button>
+    <button class="tab-btn" data-tab="recettes"><span class="num">ii.</span>Recettes</button>
+    <button class="tab-btn" data-tab="courses"><span class="num">iii.</span>Liste de courses</button>
+  </nav>
+
+  <!-- ============ PANEL : PLAN ============ -->
+  <section class="panel active" id="plan">
+    <div class="section-label">— Calendrier des repas</div>
+    <h2>Une <span class="italic">semaine</span> au soleil.</h2>
+
+    <div class="week-grid">
+
+      <div class="day-card">
+        <div class="day-num">01</div>
+        <h3>Lundi</h3>
+        <div class="meal">
+          <div class="meal-label">Midi</div>
+          <div class="meal-name">Salade de pois chiches, concombre, tomates cerises & feta de brebis</div>
+        </div>
+        <div class="meal">
+          <div class="meal-label">Soir</div>
+          <div class="meal-name">Pâtes aux crevettes, ail, tomates cerises & basilic</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-num">02</div>
+        <h3>Mardi</h3>
+        <div class="meal">
+          <div class="meal-label">Midi</div>
+          <div class="meal-name">Wrap thon, tomate, houmous & olives</div>
+        </div>
+        <div class="meal">
+          <div class="meal-label">Soir</div>
+          <div class="meal-name">Poulet citron-origan & taboulé libanais</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-num">03</div>
+        <h3>Mercredi</h3>
+        <div class="meal">
+          <div class="meal-label">Midi</div>
+          <div class="meal-name">Bowl quinoa-lentilles, poivrons grillés & tahini-citron</div>
+        </div>
+        <div class="meal">
+          <div class="meal-label">Soir</div>
+          <div class="meal-name">Cabillaud sauce tomate-câpres-olives & riz basmati</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-num">04</div>
+        <h3>Jeudi</h3>
+        <div class="meal">
+          <div class="meal-label">Midi</div>
+          <div class="meal-name">Salade niçoise (thon, œuf, haricots verts, olives)</div>
+        </div>
+        <div class="meal">
+          <div class="meal-label">Soir</div>
+          <div class="meal-name">Omelette aux courgettes, oignons & herbes</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-num">05</div>
+        <h3>Vendredi</h3>
+        <div class="meal">
+          <div class="meal-label">Midi</div>
+          <div class="meal-name">Pita falafels, houmous & crudités</div>
+        </div>
+        <div class="meal">
+          <div class="meal-label">Soir</div>
+          <div class="meal-name">Saumon en papillote citron-aneth & boulgour</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-num">06</div>
+        <h3>Samedi</h3>
+        <div class="meal">
+          <div class="meal-label">Midi</div>
+          <div class="meal-name">Pizza fine légumes grillés & jambon cru (sans fromage)</div>
+        </div>
+        <div class="meal">
+          <div class="meal-label">Soir</div>
+          <div class="meal-name">Brochettes souvlaki, frites de patate douce & tzatziki coco</div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-num">07</div>
+        <h3>Dimanche</h3>
+        <div class="meal">
+          <div class="meal-label">Midi</div>
+          <div class="meal-name">Tajine de poulet aux citrons confits, olives & semoule</div>
+        </div>
+        <div class="meal">
+          <div class="meal-label">Soir</div>
+          <div class="meal-name">Soupe minestrone & pain grillé à l'huile d'olive</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ PANEL : RECETTES ============ -->
+  <section class="panel" id="recettes">
+    <div class="section-label">— Quatorze recettes, format express</div>
+    <h2>Le <span class="italic">livre</span> de la semaine.</h2>
+
+    <div class="recipe-grid">
+
+      <!-- RECETTE 1 : Pâtes crevettes -->
+      <article class="recipe">
+        <div class="recipe-meta">
+          <div class="recipe-num">01</div>
+          <div>Lundi · Soir</div>
+          <div class="recipe-tags">
+            <span>15 min</span>
+            <span>Une poêle</span>
+            <span>Sans lactose</span>
+          </div>
+        </div>
+        <div>
+          <h3>Pâtes aux <span class="italic">crevettes</span>, ail & tomates cerises</h3>
+          <p class="recipe-desc">Le plat italien express par excellence. Crevettes saisies dans l'huile d'olive parfumée à l'ail, tomates cerises qui fondent en sauce, basilic frais en finition.</p>
+          <div class="recipe-cols">
+            <div>
+              <div class="recipe-sub">Ingrédients · 4 pers.</div>
+              <ul class="ingredients-list">
+                <li>400 g de linguine</li>
+                <li>500 g de crevettes décortiquées</li>
+                <li>400 g de tomates cerises</li>
+                <li>4 gousses d'ail</li>
+                <li>1 piment ou piment d'Espelette</li>
+                <li>Basilic frais (1 botte)</li>
+                <li>Huile d'olive, sel, poivre</li>
+              </ul>
+            </div>
+            <div>
+              <div class="recipe-sub">Préparation</div>
+              <ol class="steps-list">
+                <li>Lancer l'eau des pâtes, salée, et cuire les linguine.</li>
+                <li>Chauffer 4 c. à s. d'huile d'olive, faire dorer l'ail émincé et le piment 1 min.</li>
+                <li>Ajouter les tomates cerises coupées en deux, écraser 5 min à feu vif.</li>
+                <li>Saisir les crevettes 2-3 min dans la sauce.</li>
+                <li>Verser les pâtes égouttées, mélanger avec une louche d'eau de cuisson, basilic ciselé.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- RECETTE 2 : Poulet citron origan -->
+      <article class="recipe">
+        <div class="recipe-meta">
+          <div class="recipe-num">02</div>
+          <div>Mardi · Soir</div>
+          <div class="recipe-tags">
+            <span>20 min</span>
+            <span>Marinade 10 min</span>
+            <span>Grec</span>
+          </div>
+        </div>
+        <div>
+          <h3>Poulet mariné <span class="italic">citron-origan</span> & taboulé libanais</h3>
+          <p class="recipe-desc">Filets de poulet juteux, marinés à la grecque, à servir avec un taboulé frais où le persil est roi.</p>
+          <div class="recipe-cols">
+            <div>
+              <div class="recipe-sub">Ingrédients · 4 pers.</div>
+              <ul class="ingredients-list">
+                <li>4 filets de poulet</li>
+                <li>2 citrons (jus + zeste)</li>
+                <li>2 c. à s. d'origan séché</li>
+                <li>3 gousses d'ail</li>
+                <li>200 g de semoule fine</li>
+                <li>2 grosses bottes de persil plat</li>
+                <li>1 botte de menthe</li>
+                <li>4 tomates</li>
+                <li>1 oignon rouge</li>
+                <li>Huile d'olive, sel</li>
+              </ul>
+            </div>
+            <div>
+              <div class="recipe-sub">Préparation</div>
+              <ol class="steps-list">
+                <li>Mariner le poulet (citron, ail, origan, huile, sel) 10 min minimum.</li>
+                <li>Hydrater la semoule avec 200 ml d'eau froide + jus de citron, laisser gonfler.</li>
+                <li>Hacher finement persil, menthe, tomates, oignon. Mélanger à la semoule, huile d'olive généreuse.</li>
+                <li>Saisir le poulet à la poêle bien chaude, 4-5 min par face.</li>
+                <li>Trancher, servir sur le taboulé.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- RECETTE 3 : Cabillaud -->
+      <article class="recipe">
+        <div class="recipe-meta">
+          <div class="recipe-num">03</div>
+          <div>Mercredi · Soir</div>
+          <div class="recipe-tags">
+            <span>20 min</span>
+            <span>Une poêle</span>
+            <span>Poisson</span>
+          </div>
+        </div>
+        <div>
+          <h3>Cabillaud sauce <span class="italic">vierge</span> aux câpres & olives</h3>
+          <p class="recipe-desc">Filets de cabillaud nacrés, fondants dans une sauce tomate vive avec câpres, olives noires et un trait de citron.</p>
+          <div class="recipe-cols">
+            <div>
+              <div class="recipe-sub">Ingrédients · 4 pers.</div>
+              <ul class="ingredients-list">
+                <li>4 filets de cabillaud (env. 600 g)</li>
+                <li>1 boîte de tomates concassées (400 g)</li>
+                <li>2 c. à s. de câpres</li>
+                <li>100 g d'olives noires Kalamata</li>
+                <li>3 gousses d'ail</li>
+                <li>250 g de riz basmati</li>
+                <li>Persil plat, citron</li>
+                <li>Huile d'olive</li>
+              </ul>
+            </div>
+            <div>
+              <div class="recipe-sub">Préparation</div>
+              <ol class="steps-list">
+                <li>Lancer la cuisson du riz basmati (12 min).</li>
+                <li>Dans une grande poêle, faire revenir l'ail dans l'huile, ajouter tomates, câpres, olives. Laisser réduire 8 min.</li>
+                <li>Déposer les filets de cabillaud dans la sauce, couvrir, cuire 6-7 min à feu doux.</li>
+                <li>Finir avec persil et jus de citron. Servir avec le riz.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- RECETTE 4 : Omelette courgettes -->
+      <article class="recipe">
+        <div class="recipe-meta">
+          <div class="recipe-num">04</div>
+          <div>Jeudi · Soir</div>
+          <div class="recipe-tags">
+            <span>15 min</span>
+            <span>Végétarien</span>
+            <span>Économique</span>
+          </div>
+        </div>
+        <div>
+          <h3>Omelette aux <span class="italic">courgettes</span>, oignons & herbes</h3>
+          <p class="recipe-desc">Inspirée du kuku sabzi iranien et de la frittata. Œufs bien battus, courgettes fondantes, herbes en pluie.</p>
+          <div class="recipe-cols">
+            <div>
+              <div class="recipe-sub">Ingrédients · 4 pers.</div>
+              <ul class="ingredients-list">
+                <li>8 œufs</li>
+                <li>2 courgettes moyennes</li>
+                <li>1 oignon</li>
+                <li>Persil, menthe, ciboulette</li>
+                <li>1 salade verte</li>
+                <li>Pain complet</li>
+                <li>Huile d'olive, sel, poivre</li>
+              </ul>
+            </div>
+            <div>
+              <div class="recipe-sub">Préparation</div>
+              <ol class="steps-list">
+                <li>Râper les courgettes, presser pour évacuer l'eau. Émincer l'oignon.</li>
+                <li>Faire revenir oignon puis courgettes à la poêle, 5-6 min.</li>
+                <li>Battre les œufs avec les herbes ciselées, sel, poivre.</li>
+                <li>Verser sur les légumes, couvrir, cuire 6-8 min à feu doux.</li>
+                <li>Servir avec salade vinaigrette et pain complet.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- RECETTE 5 : Saumon papillote -->
+      <article class="recipe">
+        <div class="recipe-meta">
+          <div class="recipe-num">05</div>
+          <div>Vendredi · Soir</div>
+          <div class="recipe-tags">
+            <span>20 min</span>
+            <span>Au four</span>
+            <span>Omega 3</span>
+          </div>
+        </div>
+        <div>
+          <h3>Saumon en <span class="italic">papillote</span>, citron, aneth & courgettes</h3>
+          <p class="recipe-desc">Le poisson cuit dans son jus, parfumé d'aneth et de citron. Zéro vaisselle, légumes inclus.</p>
+          <div class="recipe-cols">
+            <div>
+              <div class="recipe-sub">Ingrédients · 4 pers.</div>
+              <ul class="ingredients-list">
+                <li>4 pavés de saumon (env. 600 g)</li>
+                <li>2 courgettes</li>
+                <li>2 citrons</li>
+                <li>1 botte d'aneth (ou ciboulette)</li>
+                <li>250 g de boulgour</li>
+                <li>Huile d'olive, sel, poivre</li>
+              </ul>
+            </div>
+            <div>
+              <div class="recipe-sub">Préparation</div>
+              <ol class="steps-list">
+                <li>Préchauffer le four à 200 °C. Lancer le boulgour (10 min cuisson).</li>
+                <li>Tailler les courgettes en fines rondelles, disposer sur 4 carrés de papier cuisson.</li>
+                <li>Poser un pavé de saumon, rondelles de citron, aneth, filet d'huile, sel, poivre.</li>
+                <li>Fermer les papillotes, cuire 12-14 min.</li>
+                <li>Servir sur lit de boulgour, arroser du jus de cuisson.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- RECETTE 6 : Souvlaki -->
+      <article class="recipe">
+        <div class="recipe-meta">
+          <div class="recipe-num">06</div>
+          <div>Samedi · Soir</div>
+          <div class="recipe-tags">
+            <span>25 min (four)</span>
+            <span>Grec</span>
+            <span>Convivial</span>
+          </div>
+        </div>
+        <div>
+          <h3>Souvlaki de <span class="italic">poulet</span>, patate douce & tzatziki coco</h3>
+          <p class="recipe-desc">Brochettes grecques aux épices, frites de patate douce au four, et un tzatziki réinventé au yaourt de coco — sans lactose.</p>
+          <div class="recipe-cols">
+            <div>
+              <div class="recipe-sub">Ingrédients · 4 pers.</div>
+              <ul class="ingredients-list">
+                <li>600 g de blancs de poulet</li>
+                <li>4 patates douces</li>
+                <li>2 yaourts coco nature (400 g)</li>
+                <li>1 concombre</li>
+                <li>2 gousses d'ail</li>
+                <li>1 c. à s. d'origan, paprika</li>
+                <li>Menthe, citron</li>
+                <li>Huile d'olive</li>
+              </ul>
+            </div>
+            <div>
+              <div class="recipe-sub">Préparation</div>
+              <ol class="steps-list">
+                <li>Four à 220 °C. Couper les patates douces en frites, huile d'olive, paprika, sel. Enfourner 25 min.</li>
+                <li>Couper le poulet en cubes, mariner (huile, origan, ail, citron, sel).</li>
+                <li>Râper le concombre, presser. Mélanger au yaourt coco avec ail, menthe, citron.</li>
+                <li>Enfiler le poulet sur brochettes, enfourner 12 min en milieu de cuisson des frites.</li>
+                <li>Servir le tout ensemble.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- RECETTE 7 : Tajine -->
+      <article class="recipe">
+        <div class="recipe-meta">
+          <div class="recipe-num">07</div>
+          <div>Dimanche · Midi</div>
+          <div class="recipe-tags">
+            <span>1 h 15</span>
+            <span>Plat unique</span>
+            <span>Marocain</span>
+          </div>
+        </div>
+        <div>
+          <h3>Tajine de poulet aux <span class="italic">citrons confits</span> & olives</h3>
+          <p class="recipe-desc">Le seul plat long de la semaine, gardé pour le dimanche. Poulet confit dans une sauce safranée, citrons confits, olives violettes.</p>
+          <div class="recipe-cols">
+            <div>
+              <div class="recipe-sub">Ingrédients · 4 pers.</div>
+              <ul class="ingredients-list">
+                <li>8 cuisses de poulet</li>
+                <li>2 oignons</li>
+                <li>4 gousses d'ail</li>
+                <li>2 citrons confits</li>
+                <li>200 g d'olives violettes</li>
+                <li>1 dose de safran (ou curcuma)</li>
+                <li>1 c. à c. de gingembre</li>
+                <li>1 botte de coriandre</li>
+                <li>300 g de semoule moyenne</li>
+                <li>Huile d'olive</li>
+              </ul>
+            </div>
+            <div>
+              <div class="recipe-sub">Préparation</div>
+              <ol class="steps-list">
+                <li>Saisir les cuisses de poulet dans une cocotte, réserver.</li>
+                <li>Faire revenir oignons émincés et ail, ajouter safran, gingembre, sel.</li>
+                <li>Remettre le poulet, couvrir d'eau à mi-hauteur, mijoter 45 min à feu doux.</li>
+                <li>Ajouter citrons confits coupés et olives, mijoter 15 min de plus.</li>
+                <li>Pendant ce temps, hydrater la semoule (volume égal d'eau bouillante salée, 5 min).</li>
+                <li>Parsemer de coriandre, servir sur la semoule.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- RECETTE 8 : Minestrone -->
+      <article class="recipe">
+        <div class="recipe-meta">
+          <div class="recipe-num">08</div>
+          <div>Dimanche · Soir</div>
+          <div class="recipe-tags">
+            <span>25 min</span>
+            <span>Végétarien</span>
+            <span>Réconfortant</span>
+          </div>
+        </div>
+        <div>
+          <h3>Minestrone aux <span class="italic">haricots blancs</span> & légumes</h3>
+          <p class="recipe-desc">La soupe-plat italienne. Pour clore la semaine en douceur. Pain grillé frotté à l'ail.</p>
+          <div class="recipe-cols">
+            <div>
+              <div class="recipe-sub">Ingrédients · 4 pers.</div>
+              <ul class="ingredients-list">
+                <li>1 boîte de haricots blancs (400 g)</li>
+                <li>1 boîte de tomates concassées</li>
+                <li>2 carottes, 2 branches de céleri</li>
+                <li>1 oignon, 2 gousses d'ail</li>
+                <li>1 courgette</li>
+                <li>100 g de petites pâtes (orzo)</li>
+                <li>1 bouquet de basilic</li>
+                <li>Pain complet</li>
+                <li>Huile d'olive</li>
+              </ul>
+            </div>
+            <div>
+              <div class="recipe-sub">Préparation</div>
+              <ol class="steps-list">
+                <li>Couper tous les légumes en petits dés.</li>
+                <li>Faire revenir oignon, ail, carottes, céleri 5 min à l'huile d'olive.</li>
+                <li>Ajouter tomates, 1,2 L d'eau ou bouillon, courgette, haricots. Saler.</li>
+                <li>Cuire 15 min, ajouter les pâtes 8 min avant la fin.</li>
+                <li>Servir avec basilic, filet d'huile, et pain grillé.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- RECETTES MIDI BLOC -->
+      <article class="recipe">
+        <div class="recipe-meta">
+          <div class="recipe-num">09</div>
+          <div>Les midis · Express</div>
+          <div class="recipe-tags">
+            <span>5-15 min</span>
+            <span>Préparation rapide</span>
+            <span>Batch possible</span>
+          </div>
+        </div>
+        <div>
+          <h3>Les <span class="italic">déjeuners</span>, en bref</h3>
+          <p class="recipe-desc">Les midis sont conçus pour être assemblés en moins de 10 minutes ou préparés la veille. Voici les essentiels.</p>
+          <div class="recipe-cols">
+            <div>
+              <div class="recipe-sub">Lundi · Salade pois chiches</div>
+              <ul class="ingredients-list" style="font-size:13.5px">
+                <li>2 boîtes de pois chiches égouttés</li>
+                <li>1 concombre, tomates cerises</li>
+                <li>Olives noires, oignon rouge</li>
+                <li>Persil, huile d'olive, citron</li>
+                <li>Feta de brebis (souvent tolérée), pain pita</li>
+              </ul>
+              <div class="recipe-sub" style="margin-top:24px">Mardi · Wrap thon</div>
+              <ul class="ingredients-list" style="font-size:13.5px">
+                <li>4 wraps</li>
+                <li>2 boîtes de thon à l'huile d'olive</li>
+                <li>Houmous, tomate, salade, olives</li>
+              </ul>
+              <div class="recipe-sub" style="margin-top:24px">Mercredi · Bowl quinoa-lentilles</div>
+              <ul class="ingredients-list" style="font-size:13.5px">
+                <li>200 g de quinoa, 1 boîte de lentilles</li>
+                <li>2 poivrons grillés (bocal)</li>
+                <li>Roquette, vinaigrette tahini-citron</li>
+              </ul>
+            </div>
+            <div>
+              <div class="recipe-sub">Jeudi · Niçoise</div>
+              <ul class="ingredients-list" style="font-size:13.5px">
+                <li>4 œufs durs, 2 boîtes de thon</li>
+                <li>300 g de haricots verts cuits</li>
+                <li>Tomates, olives, anchois, salade</li>
+                <li>Vinaigrette olive-citron-moutarde</li>
+              </ul>
+              <div class="recipe-sub" style="margin-top:24px">Vendredi · Pita falafels</div>
+              <ul class="ingredients-list" style="font-size:13.5px">
+                <li>12 falafels (rayon frais)</li>
+                <li>4 pitas, houmous</li>
+                <li>Concombre, tomate, salade</li>
+                <li>Sauce tahini ou yaourt coco-citron</li>
+              </ul>
+              <div class="recipe-sub" style="margin-top:24px">Samedi · Pizza fine</div>
+              <ul class="ingredients-list" style="font-size:13.5px">
+                <li>2 pâtes à pizza fines</li>
+                <li>Sauce tomate, légumes grillés (poivrons, courgettes)</li>
+                <li>Jambon cru, basilic, huile d'olive (pas de fromage)</li>
+                <li>15 min au four à 240 °C</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ PANEL : COURSES ============ -->
+  <section class="panel" id="courses">
+    <div class="section-label">— Liste de courses consolidée</div>
+    <h2>Tout, en <span class="italic">une</span> course.</h2>
+
+    <div class="courses-intro">
+      <p>Organisée par <span class="italic">rayons</span> du magasin. Coche au fur et à mesure — l'avancement reste sauvegardé tant que tu ne fermes pas la page.</p>
+      <div class="stats">
+        <div class="stat-line">
+          <span class="stat-num">7</span>
+          <span class="stat-label">catégories</span>
+        </div>
+        <div class="stat-line">
+          <span class="stat-num">~80</span>
+          <span class="stat-label">€ budget estimé</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="courses-grid">
+
+      <!-- LÉGUMES FRUITS -->
+      <div class="course-cat">
+        <div class="course-cat-num">01</div>
+        <h4>Fruits & <span class="italic">légumes</span></h4>
+        <div class="course-cat-sub">Frais · prioritaire</div>
+        <ul class="course-list">
+          <li><span class="check"></span>Tomates cerises<span class="qty">800 g</span></li>
+          <li><span class="check"></span>Tomates rondes<span class="qty">8</span></li>
+          <li><span class="check"></span>Concombres<span class="qty">3</span></li>
+          <li><span class="check"></span>Courgettes<span class="qty">5</span></li>
+          <li><span class="check"></span>Poivrons<span class="qty">2</span></li>
+          <li><span class="check"></span>Carottes<span class="qty">2</span></li>
+          <li><span class="check"></span>Céleri branche<span class="qty">2 branches</span></li>
+          <li><span class="check"></span>Patates douces<span class="qty">4</span></li>
+          <li><span class="check"></span>Oignons jaunes<span class="qty">4</span></li>
+          <li><span class="check"></span>Oignon rouge<span class="qty">1</span></li>
+          <li><span class="check"></span>Ail<span class="qty">2 têtes</span></li>
+          <li><span class="check"></span>Citrons jaunes<span class="qty">6</span></li>
+          <li><span class="check"></span>Haricots verts<span class="qty">300 g</span></li>
+          <li><span class="check"></span>Salade verte<span class="qty">2 sachets</span></li>
+          <li><span class="check"></span>Roquette<span class="qty">1 sachet</span></li>
+          <li><span class="check"></span>Persil plat<span class="qty">3 bottes</span></li>
+          <li><span class="check"></span>Menthe<span class="qty">1 botte</span></li>
+          <li><span class="check"></span>Aneth ou ciboulette<span class="qty">1 botte</span></li>
+          <li><span class="check"></span>Basilic<span class="qty">2 pots</span></li>
+          <li><span class="check"></span>Coriandre<span class="qty">1 botte</span></li>
+        </ul>
+      </div>
+
+      <!-- VIANDES POISSONS -->
+      <div class="course-cat">
+        <div class="course-cat-num">02</div>
+        <h4>Viandes & <span class="italic">poissons</span></h4>
+        <div class="course-cat-sub">Frais · à conserver au froid</div>
+        <ul class="course-list">
+          <li><span class="check"></span>Filets de poulet<span class="qty">4 + 600 g</span></li>
+          <li><span class="check"></span>Cuisses de poulet<span class="qty">8</span></li>
+          <li><span class="check"></span>Crevettes décortiquées<span class="qty">500 g</span></li>
+          <li><span class="check"></span>Filets de cabillaud<span class="qty">600 g</span></li>
+          <li><span class="check"></span>Pavés de saumon<span class="qty">600 g</span></li>
+          <li><span class="check"></span>Jambon cru<span class="qty">100 g</span></li>
+        </ul>
+      </div>
+
+      <!-- ÉPICERIE SÈCHE -->
+      <div class="course-cat">
+        <div class="course-cat-num">03</div>
+        <h4>Épicerie <span class="italic">sèche</span></h4>
+        <div class="course-cat-sub">Féculents, légumineuses, conserves</div>
+        <ul class="course-list">
+          <li><span class="check"></span>Linguine<span class="qty">400 g</span></li>
+          <li><span class="check"></span>Riz basmati<span class="qty">250 g</span></li>
+          <li><span class="check"></span>Quinoa<span class="qty">200 g</span></li>
+          <li><span class="check"></span>Boulgour<span class="qty">250 g</span></li>
+          <li><span class="check"></span>Semoule moyenne<span class="qty">300 g</span></li>
+          <li><span class="check"></span>Semoule fine<span class="qty">200 g</span></li>
+          <li><span class="check"></span>Pâtes orzo<span class="qty">100 g</span></li>
+          <li><span class="check"></span>Pois chiches en boîte<span class="qty">2</span></li>
+          <li><span class="check"></span>Lentilles en boîte<span class="qty">1</span></li>
+          <li><span class="check"></span>Haricots blancs en boîte<span class="qty">1</span></li>
+          <li><span class="check"></span>Thon à l'huile d'olive<span class="qty">4 boîtes</span></li>
+          <li><span class="check"></span>Tomates concassées<span class="qty">2 boîtes</span></li>
+          <li><span class="check"></span>Anchois à l'huile<span class="qty">1 boîte</span></li>
+          <li><span class="check"></span>Olives noires Kalamata<span class="qty">200 g</span></li>
+          <li><span class="check"></span>Olives violettes<span class="qty">200 g</span></li>
+          <li><span class="check"></span>Câpres<span class="qty">1 petit pot</span></li>
+          <li><span class="check"></span>Citrons confits<span class="qty">2</span></li>
+          <li><span class="check"></span>Poivrons grillés en bocal<span class="qty">1</span></li>
+          <li><span class="check"></span>Tahini<span class="qty">1 pot</span></li>
+          <li><span class="check"></span>Houmous (ou maison)<span class="qty">2 pots</span></li>
+        </ul>
+      </div>
+
+      <!-- BOULANGERIE -->
+      <div class="course-cat">
+        <div class="course-cat-num">04</div>
+        <h4>Pains & <span class="italic">pâtes</span></h4>
+        <div class="course-cat-sub">Boulangerie · rayon traiteur</div>
+        <ul class="course-list">
+          <li><span class="check"></span>Pain pita<span class="qty">8</span></li>
+          <li><span class="check"></span>Wraps<span class="qty">4</span></li>
+          <li><span class="check"></span>Pain complet<span class="qty">1 grand</span></li>
+          <li><span class="check"></span>Pâte à pizza fine<span class="qty">2</span></li>
+          <li><span class="check"></span>Falafels (rayon frais)<span class="qty">12</span></li>
+        </ul>
+      </div>
+
+      <!-- ŒUFS & LACTOSE-FREE -->
+      <div class="course-cat">
+        <div class="course-cat-num">05</div>
+        <h4>Œufs & <span class="italic">sans lactose</span></h4>
+        <div class="course-cat-sub">Rayon frais alternatif</div>
+        <ul class="course-list">
+          <li><span class="check"></span>Œufs<span class="qty">12</span></li>
+          <li><span class="check"></span>Yaourt coco nature<span class="qty">2 pots (400 g)</span></li>
+          <li><span class="check"></span>Feta de brebis (optionnel)<span class="qty">150 g</span></li>
+        </ul>
+      </div>
+
+      <!-- ÉPICES & CONDIMENTS -->
+      <div class="course-cat">
+        <div class="course-cat-num">06</div>
+        <h4>Épices & <span class="italic">huiles</span></h4>
+        <div class="course-cat-sub">À vérifier dans tes placards</div>
+        <ul class="course-list">
+          <li><span class="check"></span>Huile d'olive vierge extra<span class="qty">1 L</span></li>
+          <li><span class="check"></span>Origan séché<span class="qty">—</span></li>
+          <li><span class="check"></span>Paprika doux<span class="qty">—</span></li>
+          <li><span class="check"></span>Piment d'Espelette<span class="qty">—</span></li>
+          <li><span class="check"></span>Safran (ou curcuma)<span class="qty">1 dose</span></li>
+          <li><span class="check"></span>Gingembre moulu<span class="qty">—</span></li>
+          <li><span class="check"></span>Moutarde<span class="qty">—</span></li>
+          <li><span class="check"></span>Sel, poivre<span class="qty">—</span></li>
+        </ul>
+      </div>
+
+      <!-- BONUS / EN CAS -->
+      <div class="course-cat">
+        <div class="course-cat-num">07</div>
+        <h4>En cas & <span class="italic">petits-déj</span></h4>
+        <div class="course-cat-sub">Suggestions complémentaires</div>
+        <ul class="course-list">
+          <li><span class="check"></span>Fruits de saison<span class="qty">7 j × 4</span></li>
+          <li><span class="check"></span>Boisson végétale (avoine, amande)<span class="qty">2 L</span></li>
+          <li><span class="check"></span>Amandes, noix<span class="qty">200 g</span></li>
+          <li><span class="check"></span>Flocons d'avoine<span class="qty">500 g</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>Plan généré pour 4 personnes · 14 repas · 8 recettes détaillées</div>
+    <div>Méditerranéen · Sans lactose · Express ≤ 20 min</div>
+  </footer>
+
+</div>
+
+<script>
+  // Tabs
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(t => {
+    t.addEventListener('click', () => {
+      tabs.forEach(x => x.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById(t.dataset.tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // Checkbox memory (within session)
+  const items = document.querySelectorAll('.course-list li');
+  items.forEach((li, i) => {
+    li.addEventListener('click', () => {
+      li.classList.toggle('checked');
+    });
+  });
+</script>
+
+</body>
+</html>
