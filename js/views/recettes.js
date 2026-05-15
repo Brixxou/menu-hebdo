@@ -15,6 +15,9 @@ export function renderRecettes(container, { state, data, callbacks }) {
       <button class="chip ${_activeFilters.slot === 'lunch' ? 'active' : ''}" data-slot="lunch">Midi</button>
       <button class="chip ${_activeFilters.slot === 'dinner' ? 'active' : ''}" data-slot="dinner">Soir</button>
       <button class="chip ${_activeFilters.favoritesOnly ? 'active' : ''}" data-fav="1">★ Favoris</button>
+      <button class="chip ${_activeFilters.maxTime === 15 ? 'active' : ''}" data-time="15">≤ 15 min</button>
+      <button class="chip ${_activeFilters.maxTime === 20 ? 'active' : ''}" data-time="20">≤ 20 min</button>
+      <button class="chip ${_activeFilters.maxTime === 30 ? 'active' : ''}" data-time="30">≤ 30 min</button>
     </div>
   `;
   header.querySelector('.search-input').addEventListener('input', e => {
@@ -31,6 +34,13 @@ export function renderRecettes(container, { state, data, callbacks }) {
     _activeFilters.favoritesOnly = !_activeFilters.favoritesOnly;
     renderRecettes(container, { state, data, callbacks });
   });
+  header.querySelectorAll('[data-time]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const v = parseInt(btn.dataset.time, 10);
+      _activeFilters.maxTime = _activeFilters.maxTime === v ? null : v;
+      renderRecettes(container, { state, data, callbacks });
+    });
+  });
   container.appendChild(header);
 
   const gridWrap = document.createElement('div');
@@ -41,6 +51,7 @@ export function renderRecettes(container, { state, data, callbacks }) {
     const filtered = data.recipes.filter(r => {
       if (_activeFilters.slot !== 'all' && r.slot !== _activeFilters.slot && r.slot !== 'both') return false;
       if (_activeFilters.favoritesOnly && !state.preferences.favorites.includes(r.id)) return false;
+      if (_activeFilters.maxTime && r.timeMin > _activeFilters.maxTime) return false;
       if (_query) {
         const hay = (r.title + ' ' + (r.ingredients ?? []).map(i => i.name).join(' ')).toLowerCase();
         if (!hay.includes(_query)) return false;
