@@ -13,6 +13,53 @@ async function main() {
   rerender();
 }
 
+function openRecipeFor(day, slot, recipeId) {
+  const recipe = _dataCache.recipesById[recipeId];
+  const cur = state.load();
+  const meal = cur.activeWeek.days.find(x => x.day === day)[slot];
+  const peopleEffective = meal.peopleOverride ?? cur.activeWeek.peopleGlobal;
+  openRecipeModal({
+    recipe,
+    peopleEffective,
+    isFavorite: cur.preferences.favorites.includes(recipeId),
+    isCooked: !!meal.cooked,
+    note: cur.activeWeek.notes?.[recipeId],
+    callbacks: {
+      onToggleFavorite: () => {
+        state.mutate(d => {
+          const i = d.preferences.favorites.indexOf(recipeId);
+          if (i >= 0) d.preferences.favorites.splice(i, 1);
+          else d.preferences.favorites.push(recipeId);
+        });
+        rerender();
+        openRecipeFor(day, slot, recipeId);
+      },
+      onToggleCooked: () => {
+        state.mutate(d => {
+          const dayObj = d.activeWeek.days.find(x => x.day === day);
+          dayObj[slot].cooked = !dayObj[slot].cooked;
+        });
+        rerender();
+        openRecipeFor(day, slot, recipeId);
+      },
+      onPeopleOverride: (n) => {
+        state.mutate(d => {
+          const dayObj = d.activeWeek.days.find(x => x.day === day);
+          dayObj[slot].peopleOverride = n;
+        });
+        rerender();
+        openRecipeFor(day, slot, recipeId);
+      },
+      onNoteChange: (text) => {
+        state.mutate(d => {
+          if (!d.activeWeek.notes) d.activeWeek.notes = {};
+          d.activeWeek.notes[recipeId] = text;
+        });
+      }
+    }
+  });
+}
+
 function rerender() {
   const s = state.load();
   const callbacks = {
@@ -21,49 +68,7 @@ function rerender() {
       state.mutate(d => { if (d.activeWeek) d.activeWeek.peopleGlobal = n; });
       rerender();
     },
-    onOpenRecipe: (day, slot, recipeId) => {
-      const recipe = _dataCache.recipesById[recipeId];
-      const cur = state.load();
-      const meal = cur.activeWeek.days.find(x => x.day === day)[slot];
-      const peopleEffective = meal.peopleOverride ?? cur.activeWeek.peopleGlobal;
-      openRecipeModal({
-        recipe,
-        peopleEffective,
-        isFavorite: cur.preferences.favorites.includes(recipeId),
-        isCooked: !!meal.cooked,
-        note: cur.activeWeek.notes?.[recipeId],
-        callbacks: {
-          onToggleFavorite: () => {
-            state.mutate(d => {
-              const i = d.preferences.favorites.indexOf(recipeId);
-              if (i >= 0) d.preferences.favorites.splice(i, 1);
-              else d.preferences.favorites.push(recipeId);
-            });
-            rerender();
-          },
-          onToggleCooked: () => {
-            state.mutate(d => {
-              const dayObj = d.activeWeek.days.find(x => x.day === day);
-              dayObj[slot].cooked = !dayObj[slot].cooked;
-            });
-            rerender();
-          },
-          onPeopleOverride: (n) => {
-            state.mutate(d => {
-              const dayObj = d.activeWeek.days.find(x => x.day === day);
-              dayObj[slot].peopleOverride = n;
-            });
-            rerender();
-          },
-          onNoteChange: (text) => {
-            state.mutate(d => {
-              if (!d.activeWeek.notes) d.activeWeek.notes = {};
-              d.activeWeek.notes[recipeId] = text;
-            });
-          }
-        }
-      });
-    },
+    onOpenRecipe: (day, slot, recipeId) => openRecipeFor(day, slot, recipeId),
     onMealAction: (day, slot) => {
       const action = prompt('Action : "cooked" / "swap" / annuler');
       if (action === 'cooked') {

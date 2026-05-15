@@ -249,6 +249,25 @@ body {
   font-size: 13px;
   cursor: pointer;
 }
+.people-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(120, 120, 128, 0.12);
+  border-radius: 14px;
+  padding: 2px 4px;
+}
+.ppl-btn {
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  font: inherit;
+  cursor: pointer;
+}
+.ppl-btn:active { background: rgba(120, 120, 128, 0.25); }
+.ppl-value { min-width: 18px; text-align: center; font-variant-numeric: tabular-nums; }
 .recipe-desc { color: var(--text-secondary); margin-bottom: 16px; }
 .section-h { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); margin: 24px 0 8px; }
 .ingredients-list { list-style: none; }

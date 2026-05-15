@@ -17,8 +17,13 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked,
           <button class="fav-toggle" aria-pressed="${isFavorite}">${isFavorite ? '★' : '☆'}</button>
         </header>
         <div class="recipe-meta">
-          ${recipe.timeMin} min · ${peopleEffective} pers.
-          <button class="people-override-btn">⋯ Personnes</button>
+          ${recipe.timeMin} min ·
+          <div class="people-inline">
+            <button class="ppl-btn" data-dir="-1">−</button>
+            <span class="ppl-value">${peopleEffective}</span>
+            <button class="ppl-btn" data-dir="+1">+</button>
+          </div>
+          pers.
         </div>
         <p class="recipe-desc">${escapeHtml(recipe.description)}</p>
         <h3 class="section-h">Ingrédients</h3>
@@ -47,9 +52,13 @@ export function openRecipeModal({ recipe, peopleEffective, isFavorite, isCooked,
   sheet.querySelector('.sheet-close').addEventListener('click', close);
   sheet.addEventListener('click', e => { if (e.target === sheet) close(); });
   sheet.querySelector('.fav-toggle').addEventListener('click', () => callbacks.onToggleFavorite());
-  sheet.querySelector('.people-override-btn').addEventListener('click', () => {
-    const n = parseInt(prompt('Pour combien de personnes ?', peopleEffective), 10);
-    if (!isNaN(n) && n >= 1 && n <= 12) callbacks.onPeopleOverride(n);
+  sheet.querySelectorAll('.ppl-btn').forEach(b => {
+    b.addEventListener('click', () => {
+      const dir = parseInt(b.dataset.dir, 10);
+      const current = parseInt(sheet.querySelector('.ppl-value').textContent, 10);
+      const next = Math.max(1, Math.min(12, current + dir));
+      if (next !== current) callbacks.onPeopleOverride(next);
+    });
   });
   sheet.querySelector('.cooked-toggle').addEventListener('click', () => callbacks.onToggleCooked());
   sheet.querySelector('.recipe-notes').addEventListener('input', e => callbacks.onNoteChange(e.target.value));
