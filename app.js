@@ -115,14 +115,6 @@ function openRecipeStandalone(recipeId) {
 
 function rerender() {
   const s = state.load();
-  document.documentElement.dataset.theme = s.preferences.theme;
-  if (s.preferences.theme === 'terracotta' && !document.querySelector('link[data-terracotta]')) {
-    const l = document.createElement('link');
-    l.rel = 'stylesheet';
-    l.setAttribute('data-terracotta', '');
-    l.href = 'https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;700&family=DM+Mono:wght@400&display=swap';
-    document.head.appendChild(l);
-  }
   const callbacks = {
     onStartWeek: () => {
       const cur = state.load();

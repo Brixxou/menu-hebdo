@@ -9,7 +9,6 @@ export function defaultState() {
     activeWeek: null,
     shoppingList: { checked: {}, inStock: {} },
     preferences: {
-      theme: 'ios',
       defaultPeople: 4,
       aisleOrder: [
         'fruits-legumes',

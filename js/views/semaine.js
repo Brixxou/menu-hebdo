@@ -17,7 +17,7 @@ function renderEmpty({ onStartWeek }) {
   div.className = 'semaine-empty';
   div.innerHTML = `
     <div class="semaine-empty-emoji">🥗</div>
-    <h2>Aucune semaine en cours</h2>
+    <h2>Aucune <em class="italic">semaine</em> en cours</h2>
     <p>Démarre ta semaine en choisissant un menu ou en composant librement.</p>
     <button class="btn-primary" id="btn-start-week">Démarrer ma semaine</button>
   `;
@@ -36,7 +36,7 @@ function renderWeek(state, data, callbacks) {
     : 'Composition libre';
   header.innerHTML = `
     <div class="semaine-title">
-      <h2>${escapeHtml(menuName)}</h2>
+      <h2>${italicizeLastWord(menuName)}</h2>
       <button class="btn-link" id="btn-history">Historique</button>
       <button class="btn-link" id="btn-restart">Nouvelle semaine</button>
     </div>
@@ -99,4 +99,11 @@ function renderDay(day, data, callbacks) {
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function italicizeLastWord(s) {
+  const safe = escapeHtml(s);
+  const idx = safe.lastIndexOf(' ');
+  if (idx < 0) return safe;
+  return `${safe.slice(0, idx)} <em class="italic">${safe.slice(idx + 1)}</em>`;
 }
