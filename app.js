@@ -7,6 +7,8 @@ import { openWizard } from './js/views/wizard.js';
 import { openSwapModal } from './js/views/swap-modal.js';
 import { renderCourses } from './js/views/courses.js';
 import { enterShoppingMode, exitShoppingMode } from './js/ui/shopping-mode.js';
+import { shareShoppingList } from './js/ui/share.js';
+import { buildShoppingList } from './js/shopping.js';
 
 const state = createState();
 
@@ -147,7 +149,13 @@ function rerender() {
       state.mutate(d => { d.shoppingList.checked = {}; });
       rerender();
     },
-    onShare: () => console.log('TODO: share'),
+    onShare: async () => {
+      const s = state.load();
+      if (!s.activeWeek) return;
+      const list = buildShoppingList(s.activeWeek, _dataCache.recipesById, s.preferences.aisleOrder);
+      const result = await shareShoppingList(list, s);
+      if (result === 'copied') alert('Liste copiée dans le presse-papier');
+    },
     onShoppingMode: () => {
       enterShoppingMode();
       let exitBtn = document.querySelector('.shopping-exit');
