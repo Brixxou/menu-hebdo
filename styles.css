@@ -196,3 +196,75 @@ body {
   padding: 4px 8px;
   cursor: pointer;
 }
+
+.sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: flex-end;
+  z-index: 100;
+  animation: fadeIn 0.2s ease;
+}
+.sheet {
+  background: var(--surface);
+  width: 100%;
+  max-height: 92vh;
+  border-radius: var(--radius-modal) var(--radius-modal) 0 0;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sheet-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(120, 120, 128, 0.15);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+}
+.sheet-body { padding: 24px 20px 40px; }
+.recipe-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.recipe-head h2 { font-size: 24px; font-weight: 700; line-height: 1.2; }
+.fav-toggle { background: none; border: none; font-size: 28px; cursor: pointer; line-height: 1; color: var(--accent); }
+.recipe-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 8px 0 12px;
+}
+.people-override-btn {
+  background: none;
+  border: 1px solid var(--separator);
+  border-radius: 14px;
+  padding: 4px 10px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.recipe-desc { color: var(--text-secondary); margin-bottom: 16px; }
+.section-h { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); margin: 24px 0 8px; }
+.ingredients-list { list-style: none; }
+.ingredients-list li { display: flex; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--separator); }
+.ing-qty { min-width: 80px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.steps-list { padding-left: 24px; }
+.steps-list li { padding: 6px 0; }
+.recipe-notes {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid var(--separator);
+  border-radius: 8px;
+  font: inherit;
+  resize: vertical;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
